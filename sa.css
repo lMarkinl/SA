@@ -1,0 +1,75 @@
+html{
+    font-family: "Open Sans";
+}
+
+body{
+    margin: 0;
+}
+
+h1, h2, h3 ,h4, h5 , p , span{
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+.container {
+    max-width: 1920px;
+    width: 100%;
+}
+
+header{
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+nav{
+    position: relative;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(255, 102, 102);
+    border-bottom: 1px solid #CCC;
+}
+
+nav:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.nav-container{
+    max-width: 1200px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#logo{
+    width: 100px ;
+    height: 100px;
+    margin-top: 25px;
+
+}
+.nav-container ul{
+    float: right;
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+}
+
+.nav-container li{
+    list-style: none;
+    float: left;
+    margin: 0 15px;
+}
+
+.nav-container li a{
+    text-decoration: nome;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+
+}
+
+.nav-container li a:hover{
+        color: #000000;
+}
