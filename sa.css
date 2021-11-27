@@ -1,27 +1,54 @@
-html{
-    font-family: "Open Sans";
-}
 
+@font-face {
+	font-family: "Dartie";
+	src: url("Dartie.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     margin: 0;
 }
 
-h1, h2, h3 ,h4, h5 , p , span{
+h1, h2{
     margin: 0;
     color: rgb(0, 0, 0);
+    text-shadow: rgb(255 255 255 / 60%) 1px 1px 1px, rgb(0 0 0 / 60%) -1px -1px 1px;
+    font-size: 75px;  
+    font-family: Dartie;
+} 
+
+p{
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.su1{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.su2{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.su3{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 .container {
     max-width: 1920px;
     width: 1920px;
-    height: 1080px;
+    height: 500px;
     background-image: url(sushi-wallpaper-hd-1920x1080-232366.jpg);
 }
 
 .trasparente-container{
     width: 100%;
     height: 100px;
-    border: 2px solid #000;
-    color: #fff;
+    border: 2px solid rgb(0, 0, 0);
     background-color: rgba(0,0,5,0.8);
     left: 50%;
     position: relative;
@@ -33,16 +60,16 @@ h1, h2, h3 ,h4, h5 , p , span{
 
 
 #logo{
-    width: 100px ;
+    width: 200px ;
     height: 100px;
-    margin-top: 25px;
+    margin-top: 0px;
 
 }
 .conteudo-container ul{
     float: right;
     height: 100px;
     line-height: 100px;
-    margin: 0;
+    margin-top: 0;
 }
 
 .conteudo-container li{
@@ -58,5 +85,20 @@ h1, h2, h3 ,h4, h5 , p , span{
 
 }
 .conteudo-container li a:hover{
-        color: #000000;
+        color: #c22222;
 }   
+
+.Info-container{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    top: 400px;
+    max-width: 1920px;
+    height: 700px;
+}
+#sushi1{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: 560px;
+    margin-right: 40px;
+}
