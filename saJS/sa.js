@@ -9,3 +9,6 @@ function ent(){
 function aindan(){
     window.location = "Cadastro.html"
 }
+function home(){
+    window.location = "index.html"
+}
