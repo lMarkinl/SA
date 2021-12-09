@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(floresta-amazonica-318520802.jpg);
     background-size: cover;
     font-family: "Comfortaa", sans-serif;
     max-width: 1920px;
@@ -51,7 +50,7 @@ h1{
     margin-bottom: 21px;
 }
 
-.login input[type ="text"], input[type="senha"]{
+.login input[type ="email"], input[type="password"], input[type="text"]{
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
@@ -61,19 +60,20 @@ h1{
     font-size: 16px;
 }
 
-.login input[tupe="submit"]{
+.login button[type="button"]{
     border: none;
     outline: none;
     height: 35px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
     border-radius: 20px;
     transition: 0.2s;
+    width: 100%;
 }
 
-.login input[tupe="submit"]:hover{
+.login button[type="button"]:hover{
     cursor: pointer;
-    background: #ff4d4d;
+    background: #60ff88;
     transition: 0.2s;
 }
 
@@ -84,6 +84,7 @@ h1{
     line-height: 20px;
     color: #ffffff;
     transition: 0.2s;
+    margin-left: 63px;
 }
 
 .login a :hover{
