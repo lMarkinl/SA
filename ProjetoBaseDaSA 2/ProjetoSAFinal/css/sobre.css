@@ -90,7 +90,7 @@ body {
     animation: colors 10s ease infinite
 }
 
-.navTrigger {
+.navAni {
     display: none;
 }
 
@@ -102,6 +102,8 @@ body {
 }
 
 
+/* Media qurey section */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
@@ -109,7 +111,7 @@ body {
 }
 
 @media screen and (max-width:768px) {
-    .navTrigger {
+    .navAni {
         display: block;
     }
     .nav div.logo {
@@ -149,7 +151,7 @@ body {
     }
 }
 
-.navTrigger {
+.navAni {
     cursor: pointer;
     width: 30px;
     height: 25px;
@@ -160,7 +162,7 @@ body {
     bottom: 0;
 }
 
-.navTrigger i {
+.navAni i {
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
     content: '';
@@ -169,14 +171,14 @@ body {
     height: 4px;
  
 }
-.navTrigger i:nth-child(1) {
+.navAni i:nth-child(1) {
     -webkit-animation: outT 0.8s backwards;
     animation: outT 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
-.navTrigger i:nth-child(2) {
+.navAni i:nth-child(2) {
     margin: 5px 0;
     -webkit-animation: outM 0.8s backwards;
     animation: outM 0.8s backwards;
@@ -184,24 +186,24 @@ body {
     animation-direction: reverse;
 }
 
-.navTrigger i:nth-child(3) {
+.navAni i:nth-child(3) {
     -webkit-animation: outBtm 0.8s backwards;
     animation: outBtm 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
 
-.navTrigger.active i:nth-child(1) {
+.navAni.active i:nth-child(1) {
     -webkit-animation: inT 0.8s forwards;
     animation: inT 0.8s forwards;
 }
 
-.navTrigger.active i:nth-child(2) {
+.navAni.active i:nth-child(2) {
     -webkit-animation: inM 0.8s forwards;
     animation: inM 0.8s forwards;
 }
 
-.navTrigger.active i:nth-child(3) {
+.navAni.active i:nth-child(3) {
     -webkit-animation: inBtm 0.8s forwards;
     animation: inBtm 0.8s forwards;
 }
@@ -357,4 +359,20 @@ body {
   .P {
     padding:2%;
   }
+}
+#img1{
+    width: 30%;
+    height: 40%;
+    margin-left: 50%;
+    display: flex;
+    border-radius: 10px;
+}
+#img2{
+    width: 30%;
+    height: 40%;
+    margin-left: 10%;
+    display: flex;
+    margin-top: -21%;
+    margin-left: 15%;
+    border-radius: 10px;
 }
