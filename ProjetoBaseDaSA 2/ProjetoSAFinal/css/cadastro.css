@@ -9,6 +9,7 @@ body{
     animation: colors 10s ease infinite;
     margin: 0;
     padding: 0;
+    height: 60vh;
 }
 /* @keyframes colors {
     0% {
@@ -34,22 +35,13 @@ body{
     border-radius: 40px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.63);
-    top: 50%;
     left: 50%;
     position: relative;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     box-sizing: border-box;
     padding: 68px 28px;
     margin-top: 25%;
 }
-
-.usuario{
-    border-radius: 50%;
-    position: absolute;
-    top: -50%;
-    left: 112px;
-}
-
 h1{
     margin: 0;
     padding-top: 0;
@@ -101,9 +93,16 @@ h1{
 
 .login a{
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 17px;
     color: #ffffff;
     transition: 0.2s;
-    margin-left: 63px;
+    margin-left: 35px;
+    position: relative;
+    top: 30px;
+}
+@media screen and (max-width:700px){
+    .login{
+     transform: translate(-50%, 10%);
+     
+    } 
 }
