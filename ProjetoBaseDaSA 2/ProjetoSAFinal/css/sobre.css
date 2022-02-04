@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
     font-family: Raleway;
@@ -22,6 +21,7 @@ body {
     position: fixed;
     line-height: 65px;
     text-align: center;
+    z-index: 2;
 }
 
 .nav div.logo {
@@ -29,7 +29,6 @@ body {
     width: auto;
     height: auto;
     padding-left: 3rem;
-    
 }
 
 .nav div.logo a {
@@ -77,19 +76,20 @@ body {
     color:#5580D3 ;
     transition: 1s;
 }
-
-
-
-
-.fundo-animado {
+.fundo-animado{
     width: 100%;
     height: 100vh;
-    background-position: center top;
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
-    animation: colors 10s ease infinite
+    animation: colors 10s ease infinite;
 }
-
+.fundo-animado img{
+    display: flex;
+    margin-left: 50%;
+    margin-top: -7%;
+    width: 50%;
+    height: 90%;
+}
 .navAni {
     display: none;
 }
@@ -101,21 +101,22 @@ body {
     transition: all 0.4s ease;
 }
 
-
 /* Media qurey section */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
+       
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:912px) {
     .navAni {
         display: block;
     }
     .nav div.logo {
-        margin-left: 15px;
+        margin-left: 1px;
+        
     }
     .nav div.links {
         width: 100%;
@@ -129,11 +130,11 @@ body {
     .nav div.links ul {
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: 50vh;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.582);
+        background-color: rgba(0, 0, 0, 0.753);
         background-position: center top;
     }
     .nav div.links ul li {
@@ -145,9 +146,11 @@ body {
         width: 100%;
         font-size: 3rem;
         padding: 20px;
+        z-index: 2;
     }
     .nav div.media_button {
         display: block;
+        z-index: 2;
     }
 }
 
@@ -159,7 +162,7 @@ body {
     position: absolute;
     right: 30px;
     top: 0;
-    bottom: 0;
+    bottom: 0;   
 }
 
 .navAni i {
@@ -169,7 +172,6 @@ body {
     display: block;
     width: 100%;
     height: 4px;
- 
 }
 .navAni i:nth-child(1) {
     -webkit-animation: outT 0.8s backwards;
@@ -342,7 +344,9 @@ body {
 
 .affix {
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.582);
+    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite
 }
 
 .H2 {
@@ -355,24 +359,31 @@ body {
   padding-right:15%;
   font-size: 20px;
 }
+.H1{
+    margin:0;
+    z-index: 1;
+    color: white;
+    text-align: justify;
+    top: 30%;
+    position: relative;
+    font-size: 5rem;
+    padding-left: 15%;
+}
+.P2{
+    margin:0;
+    z-index: 1;
+    color: white;
+    text-align: justify;
+    top: 33%;
+    position: relative;
+    font-size: 3.5rem;
+    padding-left: 15%;
+}
 @media all and (max-width:700px){
   .P {
     padding:2%;
   }
-}
-#img1{
-    width: 30%;
-    height: 40%;
-    margin-left: 50%;
-    display: flex;
-    border-radius: 10px;
-}
-#img2{
-    width: 30%;
-    height: 40%;
-    margin-left: 10%;
-    display: flex;
-    margin-top: -21%;
-    margin-left: 15%;
-    border-radius: 10px;
+  .h1{
+      padding: 2%;
+  }
 }

@@ -2,7 +2,7 @@
     font-family: Raleway;
 }
 body{ 
-    width: 100%;
+
     margin: 0;
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
@@ -34,8 +34,9 @@ body{
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.63);
         left: 50%;
+        margin-top: 20px;
         position: relative;
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -50%);
         box-sizing: border-box;
         padding: 68px 28px;
         margin-top: 25%;
@@ -100,9 +101,10 @@ h1{
         position: relative;
         top: 30px;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:1000px){
        .login{
         transform: translate(-50%, 10%);
+        
         
        } 
 }

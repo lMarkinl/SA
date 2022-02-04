@@ -29,6 +29,7 @@ body {
     width: auto;
     height: auto;
     padding-left: 3rem;
+    margin-top: -2px;
 }
 
 .nav div.logo a {
@@ -130,7 +131,7 @@ body {
     .nav div.links ul {
         flex-direction: column;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         right: 0;
         left: 0;
         bottom: 0;
