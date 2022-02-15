@@ -1,3 +1,4 @@
+//NAV BAR
 $('.navAni').click(function () {
     $(this).toggleClass('active');
     console.log("Clicked menu");
@@ -5,3 +6,7 @@ $('.navAni').click(function () {
     $("#link").fadeIn();
 
 });
+
+function começar() {
+    window.location = ".html"
+}

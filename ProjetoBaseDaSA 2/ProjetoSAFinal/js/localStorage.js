@@ -1,25 +1,30 @@
 //Logar
-let cadastro = []
+var cadastro = []
+
+var usuario = []
+var senha = []
+var email = []
 
 const entrar = function() {
 
-    let usuario = document.getElementById('usuario2')
-    let senha = document.getElementById('senha2')
+    usuario = document.getElementById("usuario2")
+    senha = document.getElementById("senha2")
     console.log(usuario.value);
     console.log(senha.value);
 
+
     if(usuario.value !="" && senha.value != ""){
-        let users = []
-        if(localStorage.getItem('cadastro') != null)
-        users = JSON.parse(localStorage.getItem('cadastro'))
+        var users = []
+        if(localStorage.getItem("cadastro") != null)
+        users = JSON.parse(localStorage.getItem("cadastro"))
          if(users.find(users => users.usuario == usuario.value && users.senha == senha.value)){
 
-             let pagina = setTimeout(function(){
+             var pagina = setTimeout(function(){
                  window.location = "index.html"
              },2000)
 
              }else{
-                 alert('usuario ou senha incorreta')
+                 alert("usuario ou senha incorreta")
              }
          }
     }
@@ -27,15 +32,19 @@ const entrar = function() {
 
 //Cadastrar
 
-const add = function () {
-    window.location = "entrar.html"
 
-    let usuario = document.getElementById('usuario')
-    let email = document.getElementById('email')
-    let senha = document.getElementById('senha')
-    if (localStorage.getItem('cadastro') != null)
-        cadastro = JSON.parse(localStorage.getItem('cadastro'))
+const add = function (event) {
+    
+    event.preventDefault()
 
+    usuario = document.getElementById('usuario')
+    console.log(usuario);
+    email = document.getElementById("email")
+    senha = document.getElementById("senha")
+    if (localStorage.getItem("cadastro") != null)
+        cadastro = JSON.parse(localStorage.getItem("cadastro"))
+
+    
 
     cadastro.push({
         usuario: usuario.value,
@@ -49,7 +58,10 @@ const add = function () {
     email.value = ""
     senha.value= ""
 
+    // window.location = "entrar.html"
 }
+document.getElementById("botao").addEventListener("click", add)
+
 // Ver Senhna
 
 // let btn = document.querySelector('#ver')
@@ -61,10 +73,21 @@ const add = function () {
 //         senha.setAttribute('type', 'password');
 //     }})
 
+
 // Area de Admin
 
-const pesquisar = function () {
+//Criar uma função
+//para puxar dados do Cadastro (JSON.parse)
+//Mostrar dados na area de admin
 
-   document.getElementById("nome").value = localStorage.usuario
-   
+
+
+function pes () {
+    var pesquisar = document.getElementById("pesquisar").value
+        usuario = localStorage.getItem("usuario")
+        email = localStorage.getItem("email")
+        senha = localStorage.getItem("senha")
+
+    console.log("Vai que da certo");
+
 }
