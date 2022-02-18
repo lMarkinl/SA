@@ -1,0 +1,189 @@
+*{
+    font-family: Raleway;
+}
+body{ 
+    height: 200vh;
+    margin: 0;
+    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+    font-family: Raleway;
+}
+/* @keyframes colors {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+} */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway-ExtraLight.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.PgUsuario{
+    width: 900px;
+    height: 1000px;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.63);
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -90%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+    margin-top: 50%;
+}
+     
+h1{
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+.A{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    transition: 1s;
+    border: solid none;
+    background-color: rgba(0, 0, 0, 0.63);
+    border-radius: 30px;
+    transition: 1s;
+
+}
+a:hover{
+    cursor: pointer;
+}
+    
+.PgUsuario p {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.PgUsuario input{
+    width: 100%;
+    margin-bottom: 21px;
+    text-align: center;
+    margin-top: px;
+}
+
+.PgUsuario input[type="file"]{
+    margin-left: 250px;
+    border: none;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+#imgUsuario{
+    border-radius: 50%;
+    border: none;
+    width: 200px;
+    height: 100%;
+    display: block;
+    margin: auto;   
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    
+.PgUsuario input[type ="email"], input[type="number"], input[type="text"]{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+    
+a{
+    text-decoration: none;
+    font-size: 50px;
+    line-height: 20px;
+    color: #ffffff;
+    transition: 0.2s;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+
+.PgUsuario button{
+    width: 25%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 20px;
+}
+.PgUsuario button:hover{
+    cursor: pointer;
+    background: #4676d6;
+    transition: 1s;
+}
+@media screen and (max-width:700px){
+    .PgUsuario{
+     transform: translate(-50%, -15%);
+     width: 320px;
+     height: 1300px;
+    } 
+    .PgUsuario button{
+        width: 40%;
+
+    }
+    body{
+        height: 160vh;
+    }
+    .PgUsuario input[type="file"]{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1100px){
+    .PgUsuario{
+    transform: translate(-50%, -25%);
+    width: 500px;
+    height: 1300px;
+    }
+    body{
+        height: 250vh;
+    }
+    .PgUsuario input[type="file"]{
+        display: block;
+        margin-left: 45px;
+        margin-right: auto;
+     }
+
+}
+@media screen  and (max-width:1400px) and (min-width:1200px){
+    .PgUsuario{
+        transform: translate(-50%, -62%);
+    }
+
+    
+}
