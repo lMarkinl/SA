@@ -2,13 +2,14 @@
     font-family: Raleway;
 }
 body{ 
+
     margin: 0;
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
     animation: colors 10s ease infinite;
     font-family: Raleway;
 }
-@keyframes colors {
+/* @keyframes colors {
     0% {
         background-position: 0% 50%
     }
@@ -18,7 +19,7 @@ body{
     100% {
         background-position: 0% 50%
     }
-}
+} */
 
 @font-face {
         font-family: Raleway;

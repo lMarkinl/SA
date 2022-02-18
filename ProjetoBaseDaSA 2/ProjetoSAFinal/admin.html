@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health History</title>
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/global.css">
-
 </head>
 <body>
+    <a href="index.html">Health History</a>
     <div class="admin">
-        <a class="A" href="index.html">Pagina Inicial</a>
         <h1>Area de administração</h1>
             <form>
-                <input type="text" name="Pesquisar" id="pesquisar" placeholder="Pesquisar nome de usuário">
-                <button type="button" onclick="pes()">Pesquisar</button>
-                <p>Histórico</p>
-                <input type="text" name="historico" id="hist" readonly id="">
-                <p>Dados do usuário</p><br>
-                <p>Nome</p>
-                <input type="text" name="Nome" id="nomeAdmin" placeholder="Nome do Usuário" readonly>
-                <p>E-mail</p>
-                <input type="email" name="email" id="emailAdmin" placeholder="E-mail" readonly>
-                <p>Senha</p>
-                <input type="password" name="senha" id="senhaAdmin" placeholder="Senha" readonly>
-                <br>
+                <input type="text" name="Pesquisar" id="pesquisarUsers" placeholder="Pesquisar nome de usuário">
+
+                <button type="button" onclick="pesquisar()">Pesquisar</button>
+                <p>Dados do usuário</p>
+                <p>Usuario:</p>
+                <input type="text" id="dados_nome" readonly placeholder="Nome de Usuario">
+            
+                <p>Email:</p>
+                <input type="email" id="dados_email" readonly placeholder="Email do Usuario">
+         
+                <p>Senha:</p>
+                <input type="text" id="dados_senha" readonly placeholder="Senha do Usuario">
+
+
                 <button onclick="delhist()">Deletar Histórico</button>
                 <button onclick="delconta()">Editar Histórico</button>
             </form>
     </div>
-    <script src="./js/localStorage.js"></script>
+    <script src="js/localStorage.js"></script>
 </body>
 </html>

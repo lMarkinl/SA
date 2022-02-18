@@ -1,66 +1,148 @@
 //Logar
-var cadastro = []
+let cadastro = []
 
-var usuario = []
-var senha = []
-var email = []
+let usuario_cadastro = document.getElementById('usuario')
+let email_cadastro = document.getElementById('email')
+let senha_cadastro = document.getElementById('senha')
 
-const entrar = function() {
+let usuario_login = document.getElementById('usuario2')
+let senha_login = document.getElementById('senha2')
 
-    usuario = document.getElementById("usuario2")
-    senha = document.getElementById("senha2")
-    console.log(usuario.value);
-    console.log(senha.value);
+let pesquisarUsers = document.getElementById('pesquisarUsers')
+
+let dadosNome = document.getElementById('dados_nome')
+let dadosEmail = document.getElementById('dados_email')
+let dadosSenha = document.getElementById('dados_senha')
 
 
-    if(usuario.value !="" && senha.value != ""){
-        var users = []
-        if(localStorage.getItem("cadastro") != null)
-        users = JSON.parse(localStorage.getItem("cadastro"))
-         if(users.find(users => users.usuario == usuario.value && users.senha == senha.value)){
 
-             var pagina = setTimeout(function(){
-                 window.location = "index.html"
-             },2000)
 
-             }else{
-                 alert("usuario ou senha incorreta")
-             }
-         }
+const entrar = function () {
+
+
+    // console.log(usuario.value);
+    // console.log(senha.value);
+
+    if (usuario_login.value != "" && senha_login.value != "") {
+        let users = []
+        if (localStorage.getItem('cadastro') != null)
+            users = JSON.parse(localStorage.getItem('cadastro'))
+        if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
+
+            let pagina = setTimeout(function () {
+                window.location = "index.html"
+            }, 2000)
+
+        } else {
+            alert('usuario ou senha incorreta')
+        }
     }
+}
 
 
 //Cadastrar
 
+const add = function () {
 
-const add = function (event) {
-    
-    event.preventDefault()
 
-    usuario = document.getElementById('usuario')
-    console.log(usuario);
-    email = document.getElementById("email")
-    senha = document.getElementById("senha")
-    if (localStorage.getItem("cadastro") != null)
-        cadastro = JSON.parse(localStorage.getItem("cadastro"))
 
-    
 
-    cadastro.push({
-        usuario: usuario.value,
-        email: email.value,
-        senha: senha.value,
+    if (localStorage.getItem('cadastro') != null)
+        cadastro = JSON.parse(localStorage.getItem('cadastro'))
 
-    })
-    console.log(cadastro)
-    localStorage.setItem("cadastro", JSON.stringify(cadastro))
-    usuario.value = ""
-    email.value = ""
-    senha.value= ""
+    if (usuario_cadastro.value != "" && senha_cadastro.value != "" && email_cadastro.value != "") {
 
-    // window.location = "entrar.html"
+        if (email_cadastro.value.includes('@', 2) && email_cadastro.value.length > 2) {
+
+            if (email_cadastro.value.indexOf('.') > email_cadastro.value.indexOf('@') + 1) {
+
+
+                let auxUsers = cadastro.filter(cad => cad.usuario == usuario_cadastro.value)
+                let auxEmail = cadastro.filter(cad => cad.email == email_cadastro.value)
+
+                if (auxUsers.length > 0) {
+                    alert('nome de usuario ja existe')
+                    return
+                } else if (auxEmail.length > 0) {
+
+                    alert('email ja existe')
+                }
+                else {
+                    if (usuario_cadastro.value.length >= 4) {
+
+                        if (senha_cadastro.value.length >= 6) {
+
+                            cadastro.push({
+                                usuario: usuario_cadastro.value,
+                                email: email_cadastro.value,
+                                senha: senha_cadastro.value,
+                            })
+
+                            console.log(cadastro)
+                            localStorage.setItem("cadastro", JSON.stringify(cadastro))
+                            usuario_cadastro.value = ""
+                            email_cadastro.value = ""
+                            senha_cadastro.value = ""
+                            window.location = "entrar.html"
+
+                        } else {
+                            alert('senha com no minimo 6 caracteris') }
+                       
+                    } else {  alert('usuario precisa de no menimo 3 caracteris') }
+                }
+            } else { alert('coloque um email valido como: nome@nome.com') }
+
+        } else { alert('coloque o @')   }
+           
+    } else {   alert('preencha todos os campos') }
+     
+  
 }
-document.getElementById("botao").addEventListener("click", add)
+
+// Area de Admin
+
+function pesquisar() {
+
+    cadastro = JSON.parse(localStorage.getItem('cadastro'))
+
+    for (let i = 0; i < cadastro.length; i++) {
+
+        if (pesquisarUsers.value == cadastro[i].usuario) {
+
+
+
+            dadosNome.value = cadastro[i].usuario
+            dadosEmail.value = cadastro[i].email
+            dadosSenha.value = cadastro[i].senha
+
+        }
+
+    }
+}
+
+//excluir usuario
+
+function delhist() {
+
+    cadastro = JSON.parse(localStorage.getItem('cadastro'))
+    let excluirUsers
+    for (i = 0; i < cadastro.length; i++) {
+
+        if (dadosNome.value == cadastro[i].usuario) {
+            excluirUsers = i
+            cadastro.splice(excluirUsers, 1)
+
+            alert('usuario excluido')
+
+            localStorage.setItem('cadastro', JSON.stringify(cadastro))
+        }
+
+    }
+
+}
+
+
+
 
 // Ver Senhna
 
@@ -72,22 +154,3 @@ document.getElementById("botao").addEventListener("click", add)
 //     } else {
 //         senha.setAttribute('type', 'password');
 //     }})
-
-
-// Area de Admin
-
-//Criar uma função
-//para puxar dados do Cadastro (JSON.parse)
-//Mostrar dados na area de admin
-
-
-
-function pes () {
-    var pesquisar = document.getElementById("pesquisar").value
-        usuario = localStorage.getItem("usuario")
-        email = localStorage.getItem("email")
-        senha = localStorage.getItem("senha")
-
-    console.log("Vai que da certo");
-
-}

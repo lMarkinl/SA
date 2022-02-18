@@ -1,4 +1,3 @@
-//NAV BAR
 $('.navAni').click(function () {
     $(this).toggleClass('active');
     console.log("Clicked menu");
@@ -7,6 +6,3 @@ $('.navAni').click(function () {
 
 });
 
-function começar() {
-    window.location = ".html"
-}

@@ -14,6 +14,7 @@ body {
 }
 
 /* Navbar*/
+
 .nav {
     width: 100%;
     height: 65px;
@@ -28,13 +29,12 @@ body {
     width: auto;
     height: auto;
     padding-left: 3rem;
-    margin-top: -2px;
 }
 
 .nav div.logo a {
     text-decoration: none;
-    color: rgb(247, 234, 234);
-    font-size: 2rem;
+    color: #fff;
+    font-size: 2.5rem;
     transition: 1s;
 }
 
@@ -60,17 +60,16 @@ body {
 
 .nav div.links ul li {
     width: auto;
-    height: 65px;   
+    height: 65px;
     padding: 0;
-    padding-right: 2rem;
+    padding-right: 3rem;
 }
 
 .nav div.links ul li a {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 2rem;
-    transition: 1s;
+    font-size: 2.4rem;
 }
 
 .nav div.links ul li a:hover {
