@@ -1,0 +1,195 @@
+*{
+    font-family: Raleway;
+}
+body{ 
+    margin: 0;
+    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+    font-family: Raleway;
+    height: 60vh;
+}
+@keyframes colors {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+@font-face {
+        font-family: Raleway;
+        src: url(Raleway-ExtraLight.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+.login{
+        width: 320px;
+        height: 400px;
+        border-radius: 40px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.63);
+        left: 50%;
+        position: relative;
+        transform: translate(-50%, 70%);
+        box-sizing: border-box;
+        padding: 68px 28px;
+}
+    
+
+h1{
+        margin: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-bottom: 20px;
+        letter-spacing: 10px;
+        text-align: center;
+        font-size: 25px;
+    
+}
+    
+.login p {
+        margin: 0;
+        padding: 0;
+        
+}
+    
+.login input{
+        width: 100%;
+        margin-bottom: 21px;
+}
+    
+.login input[type ="email"], input[type="password"], input[type="text"]{
+        border: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+}
+    
+.login button[type="button"]{
+        border: none;
+        outline: none;
+        height: 35px;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        border-radius: 20px;
+        transition: 1s;
+        width: 100%;
+        
+}
+    
+.login button[type="button"]:hover{
+        cursor: pointer;
+        background: #4676d6;
+        transition: 1s;
+}
+.login a{
+        text-decoration: none;
+        font-size: 17px;
+        color: #ffffff;
+        transition: 0.2s;
+        margin-left: 28px;
+        position: relative;
+        top: 30px;
+}
+@media screen and (max-width:700px){
+       .login{
+                transform: translate(-50%, 30%);
+       } 
+}
+@media screen and (max-width:740px) and (min-width:701px){
+        .login{
+                width: 450px;
+                height: 550px;
+                transform: translate(-50%, 5%);
+        }
+        .login input[type ="email"], input[type="password"], input[type="text"]{
+                height: 80px;
+                font-size: 26px;
+        }
+        .login p {
+               font-size: 20px;       
+        }
+        .login button[type="button"]{
+                height: 70px;
+                font-size: 30px;
+                
+        }
+        h1{
+                font-size: 35px;
+            
+        }
+        .login a{
+                font-size: 30px;
+                margin-left: 25px;
+        }
+            
+}
+@media screen and (max-width:1000px) and (min-width:768px){
+        .login{
+                width: 450px;
+                height: 550px;
+                transform: translate(-50%, 50%);
+        }
+        .login input[type ="email"], input[type="password"], input[type="text"]{
+                height: 80px;
+                font-size: 26px;
+        }
+        .login p {
+               font-size: 20px;       
+        }
+        .login button[type="button"]{
+                height: 70px;
+                font-size: 30px;
+                
+        }
+        h1{
+                font-size: 35px;
+            
+        }
+        .login a{
+                font-size: 30px;
+                margin-left: 25px;
+        }
+            
+}
+@media screen and (max-width:1300px) and (min-width:1024px){
+        .login{
+                width: 450px;
+                height: 550px;
+                transform: translate(-50%, 10%);
+        }
+        .login input[type ="email"], input[type="password"], input[type="text"]{
+                height: 80px;
+                font-size: 26px;
+        }
+        .login p {
+               font-size: 20px;       
+        }
+        .login button[type="button"]{
+                height: 70px;
+                font-size: 30px;
+                
+        }
+        h1{
+                font-size: 35px;
+            
+        }
+        .login a{
+                font-size: 30px;
+                margin-left: 25px;
+        }
+            
+}
+@media screen and (min-width:1320px) and (max-width:1600px){
+        .login{
+         transform: translate(-50%, 35%);
+        }
+     }
