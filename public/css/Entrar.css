@@ -9,17 +9,17 @@ body{
     animation: colors 10s ease infinite;
     font-family: Raleway;
 }
-/* @keyframes colors {
-    0% {
-        background-position: 0% 50%
+@keyframes colors {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
     }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-} */
 
 @font-face {
         font-family: Raleway;
