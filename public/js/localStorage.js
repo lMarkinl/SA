@@ -1,6 +1,7 @@
-//Logar
 let cadastro = []
 
+var excluirUsers = 0
+var EditUser = 0
 let usuario_cadastro = document.getElementById('usuario')
 let email_cadastro = document.getElementById('email')
 let senha_cadastro = document.getElementById('senha')
@@ -15,36 +16,9 @@ let dadosEmail = document.getElementById('dados_email')
 let dadosSenha = document.getElementById('dados_senha')
 
 
-
-
-const entrar = function () {
-
-
-    // console.log(usuario.value);
-    // console.log(senha.value);
-
-    if (usuario_login.value != "" && senha_login.value != "") {
-        let users = []
-        if (localStorage.getItem('cadastro') != null)
-            users = JSON.parse(localStorage.getItem('cadastro'))
-        if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
-
-            let pagina = setTimeout(function () {
-                window.location = "index.html"
-            }, 1000)
-
-        } else {
-            alert('usuario ou senha incorreta')
-        }
-    }
-}
-
-
 //Cadastrar
 
 const add = function () {
-
-
 
 
     if (localStorage.getItem('cadastro') != null)
@@ -86,17 +60,40 @@ const add = function () {
                             window.location = "entrar.html"
 
                         } else {
-                            alert('senha com no minimo 6 caracteris') }
-                       
-                    } else {  alert('usuario precisa de no menimo 3 caracteris') }
+                            alert('senha com no minimo 6 caracteris')
+                        }
+
+                    } else { alert('usuario precisa de no menimo 3 caracteris') }
                 }
             } else { alert('coloque um email valido como: nome@nome.com') }
 
-        } else { alert('coloque o @')   }
-           
-    } else {   alert('preencha todos os campos') }
-     
-  
+        } else { alert('coloque o @') }
+
+    } else { alert('preencha todos os campos') }
+
+
+}
+
+//Logar
+const entrar = function () {
+
+
+
+
+    if (usuario_login.value != "" && senha_login.value != "") {
+        let users = []
+        if (localStorage.getItem('cadastro') != null)
+            users = JSON.parse(localStorage.getItem('cadastro'))
+        if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
+
+            let pagina = setTimeout(function () {
+                window.location = "index.html"
+            }, 2000)
+
+        } else {
+            alert('usuario ou senha incorreta')
+        }
+    }
 }
 
 // Area de Admin
@@ -105,12 +102,14 @@ function pesquisar() {
 
     cadastro = JSON.parse(localStorage.getItem('cadastro'))
 
+
+
     for (let i = 0; i < cadastro.length; i++) {
 
         if (pesquisarUsers.value == cadastro[i].usuario) {
 
 
-
+            EditUser = i
             dadosNome.value = cadastro[i].usuario
             dadosEmail.value = cadastro[i].email
             dadosSenha.value = cadastro[i].senha
@@ -125,10 +124,10 @@ function pesquisar() {
 function delhist() {
 
     cadastro = JSON.parse(localStorage.getItem('cadastro'))
-    let excluirUsers
+
     for (i = 0; i < cadastro.length; i++) {
 
-        if (dadosNome.value == cadastro[i].usuario) {
+        if (pesquisarUsers.value == cadastro[i].usuario) {
             excluirUsers = i
             cadastro.splice(excluirUsers, 1)
 
@@ -141,16 +140,56 @@ function delhist() {
 
 }
 
+//editar
+function UpDados() {
+
+      cadastro = JSON.parse(localStorage.getItem('cadastro'))
+
+    if (dadosNome.value != "" && dadosEmail.value != "" && dadosSenha.value != "") {
+
+        if (dadosEmail.value.includes('@', 2) && dadosEmail.value.length > 2) {
+
+            if (dadosEmail.value.indexOf('.') > dadosEmail.value.indexOf('@') + 1) {
 
 
+               
+                let auxEmail = cadastro.filter(cad => cad.email == dadosEmail.value)
 
-// Ver Senhna
+                if (auxUsers.length > 0 ) {
+                    alert('nome de usuario ja existe')
+                    
+                    return
+                } else if (auxEmail.length > 0) {
 
-// let btn = document.querySelector('#ver')
-// btn.addEventListener('click', function(){
-// let senha = document.querySelector('#senha')
-//     if(senha.getAttribute('type') == 'password') {
-//         senha.setAttribute('type', 'text');
-//     } else {
-//         senha.setAttribute('type', 'password');
-//     }})
+                    alert('email ja existe')
+                }
+                else {
+                    if (dadosNome.value.length >= 4) {
+
+                        if (dadosSenha.value.length >= 6) {
+
+
+                            cadastro[EditUser].usuario = dadosNome.value
+                            cadastro[EditUser].email = dadosEmail.value
+                            cadastro[EditUser].senha = dadosSenha.value
+
+                            alert('dados atualizados')
+
+                            localStorage.setItem('cadastro', JSON.stringify(cadastro))
+
+                        } else {
+                            alert('senha com no minimo 6 caracteris')
+                        }
+
+                    } else { alert('usuario precisa de no menimo 3 caracteris') }
+                }
+            } else { alert('coloque um email valido como: nome@nome.com') }
+
+        } else { alert('coloque o @') }
+
+    } else { alert('preencha todos os campos') }
+
+
+  
+
+}
