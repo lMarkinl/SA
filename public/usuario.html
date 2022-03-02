@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health History</title>
     <link rel="stylesheet" href="./css/usuario.css">
-    <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
 </head>
 <body>
     <a href="./index.html">Health History</a>
@@ -26,11 +25,36 @@
                 <p>Senha:</p>
                 <input type="text" id="Usuario_senha" readonly placeholder="Senha do Usuario">
 
-
-                
                 <button onclick="delconta()">Editar Histórico</button>
             </form>
     </div>
+
+    <div class="PgUsuario-dois">
+        <select  class="escolha">
+            <option value="glico1">Glicose 1</option>
+            <option value="glico1">Glicose 2</option>
+            <option value="glico1">Glicose 3</option>
+            <option value="press">Pressao</option>
+        </select>
+        <input type="text" placeholder="Pesquisar seu Histórico">
+        <button  onclick="PesqHist()">Pesquisar</button>
+        
+        <p>Mediçao:</p>
+        <input type="text" id="input" placeholder="Digite a mediçao">
+        <p>Data da Mediçao</p>
+        <input type="text" id="input" placeholder="Data da mediçao">
+        <p>O que voce comeu quando mediu?</p>
+        <input type="text" id="input" placeholder="O que voce comeu quando mediu?">
+    </div>
+
+    <div class="PgUsuario-tres">
+        <input type="text" placeholder="Comparar dias">
+        <button  onclick="Comparar()">Comparar</button>
+        <p>Comparaçao</p>
+        <input type="text" id="input2" placeholder="Comparaçao entre dias">
+    </div>
+    <div class="div"></div>
+
     <script src="js/localStorage.js"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ const entrar = function () {
 
             let pagina = setTimeout(function () {
                 window.location = "index.html"
-            }, 2000)
+            }, 1000)
 
         } else {
             alert('usuario ou senha incorreta')
