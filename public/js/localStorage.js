@@ -143,7 +143,7 @@ function delhist() {
 //editar
 function UpDados() {
 
-      cadastro = JSON.parse(localStorage.getItem('cadastro'))
+    cadastro = JSON.parse(localStorage.getItem('cadastro'))
 
     if (dadosNome.value != "" && dadosEmail.value != "" && dadosSenha.value != "") {
 
@@ -152,12 +152,12 @@ function UpDados() {
             if (dadosEmail.value.indexOf('.') > dadosEmail.value.indexOf('@') + 1) {
 
 
-               
+
                 let auxEmail = cadastro.filter(cad => cad.email == dadosEmail.value)
 
-                if (auxUsers.length > 0 ) {
+                if (auxUsers.length > 0) {
                     alert('nome de usuario ja existe')
-                    
+
                     return
                 } else if (auxEmail.length > 0) {
 
@@ -190,6 +190,6 @@ function UpDados() {
     } else { alert('preencha todos os campos') }
 
 
-  
+
 
 }
