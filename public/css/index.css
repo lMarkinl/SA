@@ -340,7 +340,10 @@ body {
     .fundo-animado button{
         margin-top: -10%;
     }
+
 }
+
+
 
 .navAni {
     cursor: pointer;
@@ -629,6 +632,8 @@ body {
 }
 
 /*CARDS*/
+
+
 .H1-dois{
     text-align: center;
     font-size: 4rem;
@@ -704,6 +709,46 @@ body {
     height: 5vh;
 }
 
+@media screen  and (min-width: 1600px) and (max-width:2000px){
+    .H1-dois{
+        margin-top: -420px;
+    }
+    
+}
+@media screen and (max-width:700px){
+    .H1-dois{
+        margin-top: -250px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .comunicaçao{
+        margin-left: 60px;
+    }
+}
+
 .footer{
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
@@ -725,7 +770,7 @@ body {
     padding: 3px;
     display: flex;
     flex-direction: column;
-    margin-left: -60px;
+    margin-right: 60px;
 }
 
 .navegaçao{
@@ -739,5 +784,8 @@ body {
     color: white;
     padding: 8px;
     margin-top: 3px;
+}
+@media screen and (min-width:1500px){
+    
 }
 
