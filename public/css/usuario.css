@@ -9,7 +9,7 @@ body{
     animation: colors 10s ease infinite;
     font-family: Raleway;
 }
-@keyframes colors {
+/* @keyframes colors {
     0% {
         background-position: 0% 50%
     }
@@ -19,7 +19,7 @@ body{
     100% {
         background-position: 0% 50%
     }
-}
+} */
 
 @font-face {
     font-family: 'Raleway';
@@ -229,7 +229,7 @@ a{
     border: none;
     transition: 1s;
 }
-.PgUsuario-dois  button:hover{
+.PgUsuario-dois button:hover{
     cursor: pointer;
     background: #4676d6;
     transition: 1s;
@@ -247,6 +247,58 @@ a{
     font-size: 20px;
 }
 
+@media screen and (max-width:700px){
+    .PgUsuario-dois{
+        width: 320px;
+        height: 660px;
+    }
+    .escolha{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #inputP{
+        width: 70%;
+        margin-top: 20px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .PgUsuario-dois button{
+       margin-top: 20px;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .PgUsuario-dois{
+        width: 500px;
+        height: 550px;
+    }
+    .escolha{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .PgUsuario-dois #inputP{
+        margin-left: auto;
+        margin-right: auto;
+        display:flex;
+        width: 65%;
+        margin: 20px;
+    }
+    .PgUsuario-dois button{
+        margin-left: 350px;
+        margin-top: -68px;
+    }
+}
+
+
 /* PgUsuario tres */
 
 .PgUsuario-tres{
@@ -262,13 +314,22 @@ a{
     padding: 68px 28px;
     margin-top: 30px;
 }
-.PgUsuario-tres input{
+.PgUsuario-tres #inputN{
     margin-top: -52px;
-    width: 600px;
+    width: 30%;
     display: flex;
     height: 50px;
     font-size: 20px;
     text-align: center;
+}
+.PgUsuario-tres #inputM{
+    margin-top: -53px;
+    width: 30%;
+    display: flex;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 300px;
 }
 .PgUsuario-tres button{
     margin-left: 75%;
@@ -302,3 +363,62 @@ a{
 .div{
     height: 5vh;
 }
+@media screen and (max-width:700px) {
+    .PgUsuario-tres{
+        width: 320px;
+        height: 380px;
+    }
+    .PgUsuario-tres #inputN{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .PgUsuario-tres #inputM{
+        width: 80%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .PgUsuario-tres button{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .PgUsuario-tres{
+        width: 500px;
+        height: 400px;
+    }
+    .PgUsuario-tres #inputN{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .PgUsuario-tres #inputM{
+        width: 90%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .PgUsuario-tres button{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .PgUsuario-tres #input2{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+

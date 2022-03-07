@@ -33,12 +33,11 @@
 
     <div class="PgUsuario-dois">
         <select  class="escolha">
-            <option value="glico1">Glicose 1</option>
-            <option value="glico1">Glicose 2</option>
-            <option value="glico1">Glicose 3</option>
-            <option value="press">Pressao</option>
+            <option value="glico1">Diabetis Tipo 1</option>
+            <option value="glico1">Diabetis Tipo 1</option>
+            <option value="glico1">Diabetis gestacional</option>
         </select>
-        <input type="text" placeholder="Pesquisar seu Histórico">
+        <input id="inputP" type="text" placeholder="Pesquisar seu Histórico">
         <button  onclick="PesqHist()">Pesquisar</button>
         
         <p>Mediçao:</p>
@@ -50,7 +49,8 @@
     </div>
 
     <div class="PgUsuario-tres">
-        <input type="text" placeholder="Comparar dias">
+        <input id="inputN" type="text" placeholder="Digite uma data">
+        <input id="inputM" type="text" placeholder="Digite outra data">
         <button  onclick="Comparar()">Comparar</button>
         <p>Comparaçao</p>
         <input type="text" id="input2" placeholder="Comparaçao entre dias">

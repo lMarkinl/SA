@@ -637,7 +637,7 @@ body {
 .H1-dois{
     text-align: center;
     font-size: 4rem;
-    margin-top: -45px;
+    margin-top: -7%;
 }
 .cards{
     display: flex;
@@ -717,7 +717,7 @@ body {
 }
 @media screen and (max-width:700px){
     .H1-dois{
-        margin-top: -250px;
+        margin-top: -70%;
     }
     .cards{
         display: flex;
@@ -746,6 +746,36 @@ body {
     }
     .comunicaçao{
         margin-left: 60px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1000px){
+    .H1-dois{
+        margin-top: -50%;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .redes img{
+       margin-top: 1%;
     }
 }
 
@@ -785,7 +815,5 @@ body {
     padding: 8px;
     margin-top: 3px;
 }
-@media screen and (min-width:1500px){
-    
-}
+
 
