@@ -455,8 +455,6 @@ body {
 }
   
 
-
-
 @media screen and (min-width: 1360px) and (max-width:1500px){
     .fundo-animado h1{
         font-size: 4rem;
@@ -473,7 +471,7 @@ body {
     justify-content: center;
     margin-top: -10px;
 }
-.cards p {
+.cards p{
     font-size: 20px;
 }
 .card-um{

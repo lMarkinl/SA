@@ -137,9 +137,11 @@ body {
     display: block; 
     font-size: 2.5rem;
     font-family: Raleway;
+    display: flex;
     margin-left: 15%;
     margin-top: 20%;
     cursor: pointer;
+    justify-content: center;
 }
 .fundo-animado a{
     text-decoration: none;
@@ -169,13 +171,11 @@ body {
         height: 80vh;
     }
 }
-
-@media screen and (max-width:500px){
-    .fundo-animado{
-        height: 95vh;
+@media screen and (max-width:1500px) and (min-width:1200px) {
+    .fundo-animado button{
+        margin-top: 15%;
     }
 }
-
 
 /* Media screen NAV*/
 
@@ -525,7 +525,27 @@ body {
       padding-right: 15%;
     }
 }
-  
+
+@media screen and (min-width:1350px) and (max-width:1600px){
+    .P {
+        padding:2%;
+      }
+      .h1{
+          padding: 2%;
+      }
+      .H1{
+        font-size: 4rem;
+        top: 20%;
+        padding-left: 15%;
+        padding-right: 30%;
+      }
+      .P2{
+        font-size: 2.5rem;
+        top: 23%;
+        padding-left: 15%;
+        padding-right: 35%;
+      }
+}
 
 
 
