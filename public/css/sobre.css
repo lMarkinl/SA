@@ -15,6 +15,7 @@ body {
 
 /* Navbar*/
 
+
 .nav {
     width: 100%;
     height: 65px;
@@ -29,12 +30,13 @@ body {
     width: auto;
     height: auto;
     padding-left: 3rem;
+    margin-top: -2px;
 }
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
+    color: rgb(247, 234, 234);
+    font-size: 2rem;
     transition: 1s;
 }
 
@@ -60,26 +62,28 @@ body {
 
 .nav div.links ul li {
     width: auto;
-    height: 65px;
+    height: 65px;   
     padding: 0;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .nav div.links ul li a {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 2rem;
+    transition: 1s;
 }
 
 .nav div.links ul li a:hover {
     color:#5580D3 ;
     transition: 1s;
 }
+
 .fundo-animado{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
+    background: linear-gradient(45deg, #b1b3b6, #b9bfc9,#a7a7ad,#bfc0c5);
     background-size: 300% 300%;
     animation: colors 10s ease infinite;
 }
@@ -95,13 +99,6 @@ body {
     }
 }
 
-.fundo-animado img{
-    display: flex;
-    margin-left: 50%;
-    margin-top: -7%;
-    width: 50%;
-    height: 90%;
-}
 .navAni {
     display: none;
 }
@@ -142,7 +139,7 @@ body {
     .nav div.links ul {
         flex-direction: column;
         width: 100%;
-        height: 50vh;
+        height: 30%;
         right: 0;
         left: 0;
         bottom: 0;
@@ -362,40 +359,276 @@ body {
 }
 
 .H2 {
-  text-align:center;
-  font-size: 4rem;
-}
-.P {
-  text-align: justify;
-  padding-left:15%;
-  padding-right:15%;
-  font-size: 20px;
+    text-align:center;
+    font-size: 4rem;
+    color:#97B9FA; 
+  }
+.P{
+    text-align: justify;
+    padding-left:10%;
+    padding-right:10%;
+    font-size: 2rem;
 }
 .H1{
     margin:0;
     z-index: 1;
-    color: white;
-    text-align: justify;
-    top: 30%;
+    color:#ffffff;
+    text-align: left;
+    top: 25%;
     position: relative;
     font-size: 5rem;
     padding-left: 15%;
+    padding-right: 45%;
 }
 .P2{
     margin:0;
     z-index: 1;
     color: white;
-    text-align: justify;
-    top: 33%;
+    text-align: left;
+    top: 28%;
     position: relative;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     padding-left: 15%;
+    padding-right: 45%;
 }
-@media all and (max-width:700px){
+
+@media screen and (max-width:400px){
   .P {
     padding:2%;
   }
   .h1{
       padding: 2%;
   }
+  .H1{
+    font-size: 2.5rem;
+    top: 15%;
+    padding-left: 15%;
+    padding-right: 5%;
+  }
+  .P2{
+    font-size: 1.4rem;
+    top: 17%;
+    padding-left: 15%;
+    padding-right: 5%;
+  }
+}
+@media screen and (min-width:401px) and (max-width:700px){
+    .P {
+      padding:2%;
+    }
+    .h1{
+        padding: 2%;
+    }
+    .H1{
+      font-size: 2.5rem;
+      top: 15%;
+      padding-left: 15%;
+      padding-right: 5%;
+    }
+    .P2{
+      font-size: 2rem;
+      top: 17%;
+      padding-left: 15%;
+      padding-right: 5%;
+    }
+  }
+
+@media screen and (min-width:720px) and (max-width:1300px){
+    .P {
+      padding:2%;
+    }
+    .h1{
+        padding: 2%;
+    }
+    .H1{
+      font-size: 4rem;
+      top: 20%;
+      padding-left: 15%;
+      padding-right: 20%;
+    }
+    .P2{
+      font-size: 2.5rem;
+      top: 23%;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+}
+  
+
+
+
+@media screen and (min-width: 1360px) and (max-width:1500px){
+    .fundo-animado h1{
+        font-size: 4rem;
+        
+    }
+    .fundo-animado p{
+        font-size: 1.7rem;
+    }
+}
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+.cards p {
+    font-size: 20px;
+}
+.card-um{
+    width: 23%;
+    height: 24%;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+.card-um img{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: 2px solid #97B9FA;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.card-dois{
+    width: 23%;
+    height: 24%;
+    display: inline-block;
+    text-align: center;
+}
+.card-dois img{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: 2px solid #97B9FA;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.card-tres{
+    width: 23%;
+    height: 24%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+}
+.card-tres img{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: 2px solid #97B9FA;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:700px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1000px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
+
+.footer{
+    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.redes img{
+    width: 50px;
+    height: 50px;
+    margin-top: 35%;
+}
+
+.comunicaçao p{
+    font-size: 17px;
+    color: white;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.navegaçao{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+}
+.navegaçao a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-top: 3px;
+}
+
+@media screen and (max-width:700px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .comunicaçao{
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1000px){
+    .redes img{
+       margin-top: 1%;
+    }
 }
