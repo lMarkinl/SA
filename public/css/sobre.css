@@ -392,7 +392,7 @@ body {
     padding-right: 45%;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:395px){
   .P {
     padding:2%;
   }
@@ -426,7 +426,7 @@ body {
       padding-right: 5%;
     }
     .P2{
-      font-size: 2rem;
+      font-size: 1.8rem;
       top: 17%;
       padding-left: 15%;
       padding-right: 5%;
