@@ -113,11 +113,11 @@ const entrar = function () {
             }, 2000)
 
         } else {
-            Swal.fire(Swal.fire({
+            Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Usuario ou senha incorreto',
-              }) )
+              })
         }
     }
 }
