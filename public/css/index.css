@@ -437,7 +437,7 @@ body {
     text-align: justify;
     padding-left:10%;
     padding-right:10%;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .H1{
     margin:0;
@@ -527,20 +527,17 @@ body {
 }
 
 @media screen and (min-width:1350px) and (max-width:1600px){
-    .P {
-        padding:2%;
-      }
       .h1{
           padding: 2%;
       }
       .H1{
-        font-size: 4rem;
+        font-size: 3rem;
         top: 20%;
         padding-left: 15%;
-        padding-right: 30%;
+        padding-right: 35%;
       }
       .P2{
-        font-size: 2.5rem;
+        font-size: 2rem;
         top: 23%;
         padding-left: 15%;
         padding-right: 35%;

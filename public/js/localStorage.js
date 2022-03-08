@@ -35,11 +35,11 @@ const add = function () {
                 let auxEmail = cadastro.filter(cad => cad.email == email_cadastro.value)
 
                 if (auxUsers.length > 0) {
-                    alert('nome de usuario ja existe')
+                    Swal.fire('nome de usuario ja existe')
                     return
                 } else if (auxEmail.length > 0) {
 
-                    alert('email ja existe')
+                    Swal.fire('email ja existe')
                 }
                 else {
                     if (usuario_cadastro.value.length >= 4) {
@@ -59,17 +59,39 @@ const add = function () {
                             senha_cadastro.value = ""
                             window.location = "entrar.html"
 
-                        } else {
-                            alert('senha com no minimo 6 caracteris')
-                        }
+                        } else { Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'senha com no minimo 6 caracteris',
+                        })}
 
-                    } else { alert('usuario precisa de no menimo 3 caracteris') }
+
+                    } else {  Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'usuario precisa de no menimo 3 caracteris',
+                      }) }
                 }
-            } else { alert('coloque um email valido como: nome@nome.com') }
 
-        } else { alert('coloque o @') }
+             } else {  Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'coloque um email valido como',
+                footer: 'exemplo@gmail.com'
+              }) }
 
-    } else { alert('preencha todos os campos') }
+        } else {  Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Coloque o @',
+            footer: 'exemplo@gmail.com'
+          }) }
+
+    } else { Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Preencha todos os campos',
+      }) }
 
 
 }
@@ -91,7 +113,11 @@ const entrar = function () {
             }, 2000)
 
         } else {
-            alert('usuario ou senha incorreta')
+            Swal.fire(Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuario ou senha incorreto',
+              }) )
         }
     }
 }
@@ -131,7 +157,7 @@ function delhist() {
             excluirUsers = i
             cadastro.splice(excluirUsers, 1)
 
-            alert('usuario excluido')
+            Swal.fire('usuario excluido')
 
             localStorage.setItem('cadastro', JSON.stringify(cadastro))
         }
@@ -156,12 +182,20 @@ function UpDados() {
                 let auxEmail = cadastro.filter(cad => cad.email == dadosEmail.value)
 
                 if (auxUsers.length > 0) {
-                    alert('nome de usuario ja existe')
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Nome de usuario ja existe',
+                      }) 
 
                     return
                 } else if (auxEmail.length > 0) {
 
-                    alert('email ja existe')
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Email ja existe',
+                      }) 
                 }
                 else {
                     if (dadosNome.value.length >= 4) {
@@ -173,21 +207,44 @@ function UpDados() {
                             cadastro[EditUser].email = dadosEmail.value
                             cadastro[EditUser].senha = dadosSenha.value
 
-                            alert('dados atualizados')
+                            Swal.fire('dados atualizados')
 
                             localStorage.setItem('cadastro', JSON.stringify(cadastro))
 
                         } else {
-                            alert('senha com no minimo 6 caracteris')
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Senha com no minimo 6 caracteris',
+                              }) 
                         }
 
-                    } else { alert('usuario precisa de no menimo 3 caracteris') }
+                    } else {  Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Usuario precisa de no minimo 3 caracteris',
+                      })  }
                 }
-            } else { alert('coloque um email valido como: nome@nome.com') }
+            } else {  Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Coloque um Email valido',
+                footer:'exemplo@gmail.com'
+              }) }
 
-        } else { alert('coloque o @') }
+        } else {  Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Coloque o @ no seu email',
+          }) }
 
-    } else { alert('preencha todos os campos') }
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos',
+          }) 
+    }
 
 
 
