@@ -15,6 +15,14 @@ let dadosNome = document.getElementById('dados_nome')
 let dadosEmail = document.getElementById('dados_email')
 let dadosSenha = document.getElementById('dados_senha')
 
+let userNome = document.getElementById('Usuario_nome')
+let userEmail = document.getElementById('Usuario_email')
+let userSenha = document.getElementById('Usuario_senha')
+
+let pgH = document.getElementsByClassName('pgH')
+let pgCad = document.getElementsByClassName('pgCad')
+let pgLog = document.getElementsByClassName('pgLog')
+
 
 //Cadastrar
 
@@ -59,39 +67,95 @@ const add = function () {
                             senha_cadastro.value = ""
                             window.location = "entrar.html"
 
-                        } else { Swal.fire({
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'senha com no minimo 6 caracteris',
+                            })
+                        }
+
+
+                    } else {
+                        Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'senha com no minimo 6 caracteris',
-                        })}
-
-
-                    } else {  Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'usuario precisa de no menimo 3 caracteris',
-                      }) }
+                            text: 'usuario precisa de no menimo 3 caracteris',
+                        })
+                    }
                 }
 
-             } else {  Swal.fire({
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'coloque um email valido como',
+                    footer: 'exemplo@gmail.com'
+                })
+            }
+
+        } else {
+            Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'coloque um email valido como',
+                text: 'Coloque o @',
                 footer: 'exemplo@gmail.com'
-              }) }
+            })
+        }
 
-        } else {  Swal.fire({
+    } else {
+        Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Coloque o @',
-            footer: 'exemplo@gmail.com'
-          }) }
+            text: 'Preencha todos os campos',
+        })
+    }
 
-    } else { Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Preencha todos os campos',
-      }) }
+
+}
+
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function conectado() {
+
+    let logado = getCookie("logado")
+    if (logado == "sim") {
+
+
+
+        for (let i = 0; i < pgH.length; i++) {
+            pgH[i].style.display = "block"
+
+        }
+
+        for (let i = 0; i < pgCad.length; i++) {
+            pgCad[i].style.display = "none"
+
+        }
+        for (let i = 0; i < pgLog.length; i++) {
+            pgLog[i].style.display = "none"
+
+        }
+
+
+
+    }
+
 
 
 }
@@ -108,19 +172,27 @@ const entrar = function () {
             users = JSON.parse(localStorage.getItem('cadastro'))
         if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
 
+
+            document.cookie = "User= " + JSON.stringify(users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value))
+            document.cookie = "logado = sim"
+
             let pagina = setTimeout(function () {
                 window.location = "index.html"
-            }, 2000)
+            }, 1000)
 
         } else {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Usuario ou senha incorreto',
-              })
+            })
         }
     }
 }
+
+
+
+
 
 // Area de Admin
 
@@ -186,7 +258,7 @@ function UpDados() {
                         icon: 'error',
                         title: 'Oops...',
                         text: 'Nome de usuario ja existe',
-                      }) 
+                    })
 
                     return
                 } else if (auxEmail.length > 0) {
@@ -195,7 +267,7 @@ function UpDados() {
                         icon: 'error',
                         title: 'Oops...',
                         text: 'Email ja existe',
-                      }) 
+                    })
                 }
                 else {
                     if (dadosNome.value.length >= 4) {
@@ -216,34 +288,40 @@ function UpDados() {
                                 icon: 'error',
                                 title: 'Oops...',
                                 text: 'Senha com no minimo 6 caracteris',
-                              }) 
+                            })
                         }
 
-                    } else {  Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Usuario precisa de no minimo 3 caracteris',
-                      })  }
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Usuario precisa de no minimo 3 caracteris',
+                        })
+                    }
                 }
-            } else {  Swal.fire({
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Coloque um Email valido',
+                    footer: 'exemplo@gmail.com'
+                })
+            }
+
+        } else {
+            Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Coloque um Email valido',
-                footer:'exemplo@gmail.com'
-              }) }
-
-        } else {  Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Coloque o @ no seu email',
-          }) }
+                text: 'Coloque o @ no seu email',
+            })
+        }
 
     } else {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Preencha todos os campos',
-          }) 
+        })
     }
 
 
