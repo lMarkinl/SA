@@ -83,7 +83,7 @@ body {
 .fundo-animado{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, #b1b3b6, #b9bfc9,#a7a7ad,#bfc0c5);
+    background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
     animation: colors 10s ease infinite;
 }
@@ -458,10 +458,12 @@ body {
 @media screen and (min-width: 1360px) and (max-width:1500px){
     .fundo-animado h1{
         font-size: 4rem;
+        top: 20%;
         
     }
     .fundo-animado p{
         font-size: 1.7rem;
+        top: 22%;
     }
 }
 
@@ -469,7 +471,8 @@ body {
 .cards{
     display: flex;
     justify-content: center;
-    margin-top: -10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .cards p{
     font-size: 20px;
@@ -482,8 +485,8 @@ body {
     margin-right: 10px;
 }
 .card-um img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -500,8 +503,8 @@ body {
     text-align: center;
 }
 .card-dois img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -519,8 +522,8 @@ body {
     margin-left: 10px;
 }
 .card-tres img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
