@@ -435,7 +435,8 @@ body {
 
 @media screen and (min-width:720px) and (max-width:1300px){
     .P {
-      padding:2%;
+      padding-left: 10%;
+      padding-right: 10%;
     }
     .h1{
         padding: 2%;
@@ -447,10 +448,10 @@ body {
       padding-right: 20%;
     }
     .P2{
-      font-size: 2.5rem;
+      font-size: 2rem;
       top: 23%;
       padding-left: 15%;
-      padding-right: 15%;
+      padding-right: 35%;
     }
 }
   

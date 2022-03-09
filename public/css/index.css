@@ -551,7 +551,8 @@ body {
 
 @media screen and (min-width:1200px) and (max-width:1300px){
       .P{
-        padding:2%;
+        padding-left: 10%;
+        padding-right: 10%;
       }
       .h1{
           padding: 2%;
