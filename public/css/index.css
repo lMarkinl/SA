@@ -464,7 +464,7 @@ body {
 
 /* media screen de textos padroes */
 
-@media screen and (max-width:395px){
+@media screen and (max-width:400px){
     .P{
         padding:2%;
       }
@@ -478,7 +478,7 @@ body {
         padding-right: 5%;
       }
       .P2{
-        font-size: 2rem;
+        font-size: 1.8rem;
         top: 17%;
         padding-left: 15%;
         padding-right: 5%;
@@ -498,14 +498,14 @@ body {
       padding-right: 5%;
     }
     .P2{
-      font-size: 2.5rem;
+      font-size: 2.1rem;
       top: 17%;
       padding-left: 15%;
       padding-right: 5%;
     }
   }
 
-@media screen and (min-width:720px) and (max-width:1300px){
+@media screen and (min-width:710px) and (max-width:1300px){
     .P {
       padding:2%;
     }
