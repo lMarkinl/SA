@@ -1,10 +1,12 @@
 let cadastro = []
-
+let userLogado = []
 var excluirUsers = 0
 var EditUser = 0
+let UserId = 0
 let usuario_cadastro = document.getElementById('usuario')
 let email_cadastro = document.getElementById('email')
 let senha_cadastro = document.getElementById('senha')
+
 
 let usuario_login = document.getElementById('usuario2')
 let senha_login = document.getElementById('senha2')
@@ -22,6 +24,8 @@ let userSenha = document.getElementById('Usuario_senha')
 let pgH = document.getElementsByClassName('pgH')
 let pgCad = document.getElementsByClassName('pgCad')
 let pgLog = document.getElementsByClassName('pgLog')
+let pgHist = document.getElementsByClassName('pgHist')
+let pgUser = document.getElementsByClassName('pgUser')
 
 
 //Cadastrar
@@ -54,11 +58,24 @@ const add = function () {
 
                         if (senha_cadastro.value.length >= 6) {
 
+                            if ((localStorage.getItem('cadastro') == null)) {
+
+                                UserId = 1
+
+                            } else {
+                                UserId = cadastro.length + 1
+                            }
+                            alert(UserId)
+
                             cadastro.push({
+                                Id: UserId,
                                 usuario: usuario_cadastro.value,
                                 email: email_cadastro.value,
                                 senha: senha_cadastro.value,
+
                             })
+
+
 
                             console.log(cadastro)
                             localStorage.setItem("cadastro", JSON.stringify(cadastro))
@@ -151,6 +168,15 @@ function conectado() {
             pgLog[i].style.display = "none"
 
         }
+        for (let i = 0; i < pgHist.length; i++) {
+            pgHist[i].style.display = "inline"
+           
+        }
+        for (let i = 0; i < pgUser.length; i++) {
+            pgUser[i].style.display = "inline"
+
+        }
+        
 
 
 
@@ -168,25 +194,35 @@ const entrar = function () {
 
     if (usuario_login.value != "" && senha_login.value != "") {
         let users = []
+
+
         if (localStorage.getItem('cadastro') != null)
             users = JSON.parse(localStorage.getItem('cadastro'))
         if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
 
-
+            id = users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)
+           
+            document.cookie = "id=" + JSON.stringify(id.Id)
             document.cookie = "User= " + JSON.stringify(users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value))
             document.cookie = "logado = sim"
 
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'logado com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+              })
             let pagina = setTimeout(function () {
                 window.location = "index.html"
-            }, 1000)
+            }, 1500)
 
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Usuario ou senha incorreto',
-            })
-        }
+        } else { Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usuario ou senha incorreto', })}
+                     
+        
     }
 }
 
@@ -253,15 +289,7 @@ function UpDados() {
 
                 let auxEmail = cadastro.filter(cad => cad.email == dadosEmail.value)
 
-                if (auxUsers.length > 0) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Nome de usuario ja existe',
-                    })
-
-                    return
-                } else if (auxEmail.length > 0) {
+              if (auxEmail.length > 0) {
 
                     Swal.fire({
                         icon: 'error',
@@ -328,3 +356,7 @@ function UpDados() {
 
 
 }
+
+
+
+

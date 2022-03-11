@@ -103,7 +103,7 @@ a:hover{
     margin-bottom: 20px;
 }
     
-.PgUsuario input[type ="email"], input[type="number"], input[type="text"]{
+.PgUsuario input[type ="email"], input[type="number"], input[type="text"],input[type="date"]{
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
@@ -111,6 +111,31 @@ a:hover{
     height: 40px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+}
+
+#histData{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    text-align: center;
+
+}
+#histMed{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    text-align: center;
+
+}
+#histC{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    text-align: center;
+
 }
     
 a{
