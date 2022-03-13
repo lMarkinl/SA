@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="./img/amostra-de-sangue.png" type="image/.png">
     
 </head>
-<body onload="conectado()">
+<body>
     <nav class="nav">
         <div class="container">
             <div class="logo">
@@ -18,10 +18,8 @@
             </div>
             <div id="link" class="links">
                 <ul class="navlinks">
-                    <li class="pgLog"><a  href="./entrar.html">Entrar</a></li>   
-                    <li class="pgCad" ><a   href="./Cadastro.html">Cadastro</a></li> 
-                    <li class="pgHist" style="display: none;"><a  href="./historico.html">Historico</a></li> 
-                    <li class="pgUser" style="display: none;" ><a  href="./usuario.html">Usuario</a></li> 
+                    <li><a href="./entrar.html">Entrar</a></li>
+                    <li><a href="./Cadastro.html">Cadastro</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
                 </ul>
             </div>
@@ -91,9 +89,16 @@
 
     </div> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/localStorage.js"></script>
     <script src="js/index.js"></script>
-   <script src="js/scroll.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
 </body>
     
 </html>
