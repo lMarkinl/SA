@@ -79,6 +79,18 @@ body {
     color:#5580D3 ;
     transition: 1s;
 }
+.navAni {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+/* Fundo animado */
 
 .fundo-animado{
     width: 100%;
@@ -99,18 +111,9 @@ body {
     }
 }
 
-.navAni {
-    display: none;
-}
 
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
 
-/* Media qurey section */
+/* * Media screen NAV*  */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
@@ -162,6 +165,8 @@ body {
         z-index: 2;
     }
 }
+
+/* Animaçao NAV */
 
 .navAni {
     cursor: pointer;
@@ -358,6 +363,8 @@ body {
     animation: colors 10s ease infinite
 }
 
+/* Padroes de textos */
+
 .H2 {
     text-align:center;
     font-size: 4rem;
@@ -392,6 +399,7 @@ body {
     padding-right: 45%;
 }
 
+/* media screen de textos padroes */
 @media screen and (max-width:395px){
   .P {
     padding:2%;
@@ -469,6 +477,8 @@ body {
 }
 
 
+/* CARDS */
+
 .cards{
     display: flex;
     justify-content: center;
@@ -496,7 +506,6 @@ body {
     margin-top: 10px;
     border-radius: 50%;
 }
-
 .card-dois{
     width: 23%;
     height: 24%;
@@ -534,53 +543,8 @@ body {
     border-radius: 50%;
 }
 
-@media screen and (max-width:700px){
-    .cards{
-        display: flex;
-        flex-direction: column;
-    }
-    .card-tres{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-    }
-    .card-dois{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .card-um{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px;
-    }
-}
 
-@media screen and (min-width:768px) and (max-width:1000px){
-    .cards{
-        display: flex;
-        flex-direction: column;
-    }
-    .card-tres{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-    }
-    .card-dois{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .card-um{
-        width: 40vh;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px;
-    }
-}
+/* FOOTER */
 
 .footer{
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
@@ -595,8 +559,13 @@ body {
     width: 50px;
     height: 50px;
     margin-top: 35%;
+    transition: 0.2s;
 }
-
+.redes img:hover{
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.1);
+}
 .comunicaçao p{
     font-size: 17px;
     color: white;
@@ -617,9 +586,41 @@ body {
     color: white;
     padding: 8px;
     margin-top: 3px;
+    transition: 0.2s;
+}
+.navegaçao a:hover{
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.1);
 }
 
+/* media screen dos cards e do footer*/
+
 @media screen and (max-width:700px){
+    .H1-dois{
+        margin-top: -70%;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
     .footer{
         display: flex;
         flex-direction: column;
@@ -627,10 +628,45 @@ body {
     .comunicaçao{
         margin-left: 60px;
     }
+    .redes img{
+        margin-top: 15%;
+     }
+}
+
+
+@media screen and (min-width:1100px) and (max-width:1280px){
+    .H1-dois{
+        margin-top: -10%;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:1000px){
+    .H1-dois{
+        margin-top: -50%;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-tres{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .card-dois{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-um{
+        width: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
     .redes img{
-       margin-top: 32%;
+       margin-top: 1%;
     }
 }
+ 
