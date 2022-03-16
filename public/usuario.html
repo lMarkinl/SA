@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/usuario.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body onload="conectado()">
     <a href="./index.html">Health History</a>
@@ -52,11 +53,11 @@
     </div>
 
     <div class="PgUsuario-tres">
-        <input id="inputN" type="text" placeholder="Digite uma data">
-        <input id="inputM" type="text" placeholder="Digite outra data">
+        <input  id="inputN" onchange="buscardata1()" type="date">
+        <input id="inputM" onchange="buscardata1()"  type="date">
         <button  onclick="Comparar()">Comparar</button>
         <p>Comparaçao</p>
-        <input type="text" id="input2" placeholder="Comparaçao entre dias">
+        <input type="text" id="Comparacao" placeholder="Comparaçao entre dias">
     </div>
     <div class="div"></div>
 <script src="js/historico.js"></script>

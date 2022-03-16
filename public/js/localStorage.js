@@ -11,6 +11,7 @@ let senha_cadastro = document.getElementById('senha')
 let usuario_login = document.getElementById('usuario2')
 let senha_login = document.getElementById('senha2')
 
+
 let pesquisarUsers = document.getElementById('pesquisarUsers')
 
 let dadosNome = document.getElementById('dados_nome')
@@ -26,6 +27,10 @@ let pgCad = document.getElementsByClassName('pgCad')
 let pgLog = document.getElementsByClassName('pgLog')
 let pgHist = document.getElementsByClassName('pgHist')
 let pgUser = document.getElementsByClassName('pgUser')
+let pgCad2 = document.getElementsByClassName('pgCad2')
+let pgLog2= document.getElementsByClassName('pgLog2')
+let pgHist2= document.getElementsByClassName('pgHist2')
+let pgUser2 = document.getElementsByClassName('pgUser2')
 
 
 //Cadastrar
@@ -37,6 +42,8 @@ const add = function () {
         cadastro = JSON.parse(localStorage.getItem('cadastro'))
 
     if (usuario_cadastro.value != "" && senha_cadastro.value != "" && email_cadastro.value != "") {
+
+        
 
         if (email_cadastro.value.includes('@', 2) && email_cadastro.value.length > 2) {
 
@@ -177,13 +184,23 @@ function conectado() {
 
         }
         
+        for (let i = 0; i < pgCad2.length; i++) {
+            pgCad2[i].style.display = "none"
 
+        }
+        for (let i = 0; i < pgLog2.length; i++) {
+            pgLog2[i].style.display = "none"
 
+        }
+        for (let i = 0; i < pgHist2.length; i++) {
+            pgHist2[i].style.display = "inline"
+           
+        }
+        for (let i = 0; i < pgUser2.length; i++) {
+            pgUser2[i].style.display = "inline"
 
+        }
     }
-
-
-
 }
 
 //Logar
@@ -194,9 +211,10 @@ const entrar = function () {
 
     if (usuario_login.value != "" && senha_login.value != "") {
         let users = []
-
-
-        if (localStorage.getItem('cadastro') != null)
+          
+       
+         
+         if (localStorage.getItem('cadastro') != null)
             users = JSON.parse(localStorage.getItem('cadastro'))
         if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
 
@@ -225,8 +243,6 @@ const entrar = function () {
         
     }
 }
-
-
 
 
 
@@ -356,7 +372,4 @@ function UpDados() {
 
 
 }
-
-
-
 
