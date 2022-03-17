@@ -83,6 +83,7 @@ h1{
     border-radius: 20px;
     transition: 1s;
     width: 100%;
+    font-size:18px;    
 }
 
 .login button[type="button"]:hover{
