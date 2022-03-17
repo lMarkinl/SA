@@ -70,9 +70,8 @@ body {
 
 .nav div.links ul li a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     line-height: 65px;
-    color:black;
     font-size: 2rem;
     transition: 1s;
 }
@@ -166,13 +165,16 @@ body {
     .fundo-animado button{
         margin-top: 40%;
     }
-     .fundo-animado img{
+    .fundo-animado img{
         display: none;
     }
 }
 @media screen and (min-width:912px) and (max-width:999px){
     .fundo-animado{
         height: 80vh;
+    }
+    .fundo-animado img{
+        display: none;
     }
 }
 @media screen and (max-width:1500px) and (min-width:1300px) {
@@ -438,11 +440,12 @@ body {
     padding: 0;
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
-    animation: colors 10s ease infinite
+    animation: colors 10s ease infinite;
 }
 .affix div.links ul li a {
     color: rgb(255, 255, 255);
 }
+
 /* Padroes de textos */
 .H2 {
     text-align:center;
