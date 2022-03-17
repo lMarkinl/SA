@@ -440,9 +440,8 @@ body {
     animation: colors 10s ease infinite
 }
 .affix div.links ul li a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
-
 /* Padroes de textos */
 .H2 {
     text-align:center;
