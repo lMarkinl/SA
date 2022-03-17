@@ -440,7 +440,7 @@ body {
     animation: colors 10s ease infinite
 }
 .affix div.links ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 /* Padroes de textos */
 .H2 {
