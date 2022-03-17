@@ -121,11 +121,10 @@ body {
 
 .fundo-animado img{
     display: flex;
-    margin-left: 50%;
-    margin-top: 3%;
-    width: 40%;
-    height: 30%;
-    border-radius: 20px;
+    margin-left: 1240px;
+    margin-top: -45%;
+    width: 700px;
+    height: 1085px;
 }
 
 .fundo-animado button{
@@ -157,11 +156,17 @@ body {
     .fundo-animado button{
         margin-top: 50%;
     }
+    .fundo-animado img{
+        display: none;
+    }
 }   
 
 @media screen and (min-width:540px) and (max-width:1000px){
     .fundo-animado button{
         margin-top: 40%;
+    }
+     .fundo-animado img{
+        display: none;
     }
 }
 @media screen and (min-width:912px) and (max-width:999px){
@@ -169,9 +174,19 @@ body {
         height: 80vh;
     }
 }
-@media screen and (max-width:1500px) and (min-width:1200px) {
+@media screen and (max-width:1500px) and (min-width:1300px) {
     .fundo-animado button{
         margin-top: 13%;
+    }
+    .fundo-animado img{
+        width: 450px;
+        height: 673px;
+        margin-left: 906px;
+    }
+}
+@media screen and (max-width:1299px) and (min-width:1000px){
+    .fundo-animado img{
+        display: none;
     }
 }
 
