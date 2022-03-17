@@ -99,6 +99,7 @@ body {
     background: linear-gradient(45deg, #2E66D2, #5580D3,#97B9FA,#537ac9);
     background-size: 300% 300%;
     animation: colors 10s ease infinite;
+    display: flex;
 }
 
 .fundo-animado h1{
@@ -119,13 +120,6 @@ body {
     }
 }
 
-.fundo-animado img{
-    display: flex;
-    margin-left: 1240px;
-    margin-top: -45%;
-    width: 700px;
-    height: 1085px;
-}
 
 .fundo-animado button{
     border: none;
@@ -136,7 +130,7 @@ body {
     font-size: 2.5rem;
     font-family: Raleway;
     margin-left: 15%;
-    margin-top: 20%;
+    margin-top: 26%;
     cursor: pointer;
     justify-content: center;
 }
@@ -150,13 +144,22 @@ body {
 }
 
 
+.imagem-do-fundo{
+    width: 60%;
+    height: 100vh;
+}
+.imagem-do-fundo img{
+    width: 100%;
+    height: 100%;
+}
+
 /* media sreen do fundo animado */
 
 @media screen and (max-width:530px){
     .fundo-animado button{
         margin-top: 50%;
     }
-    .fundo-animado img{
+    .imagem-do-fundo{
         display: none;
     }
 }   
@@ -165,7 +168,7 @@ body {
     .fundo-animado button{
         margin-top: 40%;
     }
-    .fundo-animado img{
+    .imagem-do-fundo{
         display: none;
     }
 }
@@ -173,22 +176,18 @@ body {
     .fundo-animado{
         height: 80vh;
     }
-    .fundo-animado img{
+    .imagem-do-fundo{
         display: none;
     }
 }
 @media screen and (max-width:1500px) and (min-width:1300px) {
     .fundo-animado button{
-        margin-top: 13%;
+        margin-top: 22%;
     }
-    .fundo-animado img{
-        width: 450px;
-        height: 673px;
-        margin-left: 906px;
-    }
+    
 }
 @media screen and (max-width:1299px) and (min-width:1000px){
-    .fundo-animado img{
+    .imagem-do-fundo{
         display: none;
     }
 }
@@ -238,6 +237,7 @@ body {
         font-size: 3rem;
         padding: 20px;
         z-index: 2;
+        color: white;
     }
     .nav div.media_button {
         display: block;
