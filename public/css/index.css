@@ -846,7 +846,7 @@ body {
         margin-left: 60px;
     }
     .redes img{
-        margin-top: 15%;
+       margin-bottom: auto;
      }
 }
 
@@ -883,7 +883,7 @@ body {
         margin-bottom: 10px;
     }
     .redes img{
-       margin-top: 1%;
+       margin-bottom: auto;
     }
 }
  

@@ -558,7 +558,7 @@ body {
 .redes img{
     width: 50px;
     height: 50px;
-    margin-top: 35%;
+    margin-top: 30%;
     transition: 0.2s;
 }
 .redes img:hover{
@@ -629,8 +629,8 @@ body {
         margin-left: 60px;
     }
     .redes img{
-        margin-top: 15%;
-     }
+        margin-bottom: auto;
+      }
 }
 
 
@@ -666,7 +666,7 @@ body {
         margin-bottom: 10px;
     }
     .redes img{
-       margin-top: 1%;
-    }
+        margin-bottom: auto;
+      }
 }
  
