@@ -664,8 +664,8 @@ body {
 
 @media screen and ( min-width:601px ) and (max-width:1024px ){
     #img3{
-        width: 600px;
-        height: 350px;
+        width: 500px;
+        height: 300px;
     }
 }
 
