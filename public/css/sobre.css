@@ -640,7 +640,12 @@ body {
     }
     .redes img{
         margin-bottom: auto;
-      }
+        
+    }
+    .redes{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 

@@ -133,6 +133,7 @@ body {
     cursor: pointer;
     justify-content: center;
     color: #487ce4;
+    margin-top: 25%;
 }
 .fundo-animado a{
     text-decoration: none;
@@ -155,7 +156,7 @@ body {
 
 /* media sreen do fundo animado */
 
-@media screen and (max-width:530px){
+@media screen and (max-width:539px){
     .fundo-animado button{
         margin-top: 50%;
     }
@@ -164,7 +165,7 @@ body {
     }
 }   
 
-@media screen and (min-width:540px) and (max-width:1000px){
+@media screen and (min-width:540px) and (max-width:911px){
     .fundo-animado button{
         margin-top: 40%;
     }
@@ -524,7 +525,7 @@ body {
     }
   }
 
-@media screen and (min-width:710px) and (max-width:940px){
+@media screen and (min-width:710px) and (max-width:949px){
     .P {
       padding:2%;
     }
@@ -546,7 +547,7 @@ body {
 }
 
 
-@media screen and (min-width:950px) and (max-width:1100px){
+@media screen and (min-width:950px) and (max-width:1199px){
     .P {
         padding:2%;
       }
@@ -568,7 +569,7 @@ body {
 }
 
 
-@media screen and (min-width:1200px) and (max-width:1300px){
+@media screen and (min-width:1200px) and (max-width:1349px){
       .P{
         padding-left: 10%;
         padding-right: 10%;
@@ -661,9 +662,9 @@ body {
 }
 
 
-@media screen and ( min-width:700px ) and (max-width:1024px ){
+@media screen and ( min-width:680px ) and (max-width:1024px ){
     #img3{
-        width: 700px;
+        width: 650px;
         height: 400px;
     }
 }
@@ -887,6 +888,14 @@ body {
     }
     .redes img{
        margin-bottom: auto;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+@media screen and (max-width:700px){
+    .redes{
+       margin-left: auto;
+       margin-right: auto;
     }
 }
  
