@@ -127,11 +127,12 @@ body {
     height: 50px;
     border-radius: 10px;
     transition: 1s;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: Raleway;
     margin-left: 15%;
     cursor: pointer;
     justify-content: center;
+    color: #487ce4;
 }
 .fundo-animado a{
     text-decoration: none;
@@ -698,12 +699,11 @@ body {
     border-radius: 10px;
 }
 .card-um img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    border: 2px solid #97B9FA;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
@@ -717,12 +717,11 @@ body {
     border-radius: 10px;
 }
 .card-dois img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    border: 2px solid #97B9FA;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
@@ -739,12 +738,11 @@ body {
 }
 
 .card-tres img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    border: 2px solid #97B9FA;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
@@ -762,12 +760,17 @@ body {
     justify-content: space-around;
 }
 
+.redes{
+    display: flex;
+}
+
 .redes img{
     width: 50px;
     height: 50px;
-    margin-top: 30%;
+    margin-top: 29%;
     cursor: pointer;
     transition: 0.2s;
+    padding: 3px;
 }
 
 .redes img:hover{
