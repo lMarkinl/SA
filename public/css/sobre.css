@@ -420,7 +420,7 @@ body {
     padding-right: 5%;
   }
 }
-@media screen and (min-width:401px) and (max-width:700px){
+@media screen and (min-width:396px) and (max-width:540px){
     .P {
       padding:2%;
     }
@@ -441,7 +441,29 @@ body {
     }
   }
 
-@media screen and (min-width:720px) and (max-width:1300px){
+
+@media screen and (min-width:541px) and (max-width:749px){
+    .P {
+        padding:2%;
+      }
+      .h1{
+          padding: 2%;
+      }
+      .H1{
+        font-size: 2.5rem;
+        top: 15%;
+        padding-left: 15%;
+        padding-right: 5%;
+      }
+      .P2{
+        font-size: 2rem;
+        top: 17%;
+        padding-left: 15%;
+        padding-right: 10%;
+      }
+}
+
+@media screen and (min-width:750px) and (max-width:1300px){
     .P {
       padding-left: 10%;
       padding-right: 10%;
@@ -459,7 +481,7 @@ body {
       font-size: 2rem;
       top: 23%;
       padding-left: 15%;
-      padding-right: 35%;
+      padding-right: 25%;
     }
 }
   
