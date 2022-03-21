@@ -7,7 +7,7 @@
     <title>Health History</title>
     <link rel="stylesheet" href="./css/usuario.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body onload="conectado()">
@@ -41,7 +41,7 @@
             <option value="glico3">Diabetis gestacional</option>
         </select>
         <input id="PesquisarHistorico" type="date" placeholder="Pesquisar seu Histórico">
-        <button  onclick="PesqHist()">Pesquisar</button>
+        <button id="pesquisar-lado" onclick="PesqHist()">Pesquisar</button>
         
         
         <p>Mediçao:</p>
@@ -50,6 +50,12 @@
         <input type="date" id="histData" readonly placeholder="Data da mediçao">
         <p>O que voce comeu quando mediu?</p>
         <input type="text" id="histC"  readonly placeholder="O que voce comeu quando mediu?">
+
+        <div class="Deletar-Editar">
+            <button id="deletar">Deletar</button>
+            <button id="editar">Editar</button>
+        </div>
+
     </div>
 
     <div class="PgUsuario-tres">
@@ -60,6 +66,7 @@
         <input type="text" id="Comparacao" placeholder="Comparaçao entre dias">
     </div>
     <div class="div"></div>
+
 <script src="js/historico.js"></script>
 <script src="js/localStorage.js"></script>
 <script src="js/usuario.js"></script>
