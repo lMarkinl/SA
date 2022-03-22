@@ -7,26 +7,24 @@
     <title>Health History</title>
     <link rel="stylesheet" href="./css/usuario.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body onload="conectado()">
     <a href="./index.html">Health History</a>
     <div class="PgUsuario">
-        <h1>Pagina de Usuario</h1>
+        <h1>Área do Usuário</h1>
             <form>
-                <p>Dados do usuário</p>
-                <img src="./img/4b3e0279e016cc145240de10c8a06fb6.jpg" id="imgUsuario">
-               
+                <p>Dados do usuário</p>   
 
-                <p>Usuario:</p>
-                <input type="text" id="Usuario_nome" readonly  placeholder="Nome de Usuario">
+                <p>Usuário:</p>
+                <input type="text" id="Usuario_nome" readonly  placeholder="Nome de Usuário">
             
                 <p>Email:</p>
-                <input type="email" id="Usuario_email"  placeholder="Email do Usuario">
+                <input type="email" id="Usuario_email"  placeholder="Email do Usuário">
          
                 <p>Senha:</p>
-                <input type="text" id="Usuario_senha" placeholder="Senha do Usuario">
+                <input type="text" id="Usuario_senha" placeholder="Senha do Usuário">
 
                
             </form>
@@ -39,18 +37,18 @@
         <select  class="escolha">
             <option value="glico1">Diabetes Tipo 1</option>
             <option value="glico2">Diabetes Tipo 2</option>
-            <option value="glico3">Diabetes gestacional</option>
+            <option value="glico3">Diabetes Gestacional</option>
         </select>
         <input id="PesquisarHistorico" type="date" placeholder="Pesquisar seu Histórico">
         <button id="pesquisar-lado" onclick="PesqHist()">Pesquisar</button>
         
         
         <p>Mediçao:</p>
-        <input type="text" id="histMed"  placeholder="Digite a mediçao">
+        <input type="text" id="histMed"  placeholder="Digite a medição">
         <p>Data da Mediçao</p>
-        <input type="date" id="histData"  placeholder="Data da mediçao">
+        <input type="date" id="histData"  placeholder="Data da medição">
         <p>O que voce comeu quando mediu?</p>
-        <input type="text" id="histC"  placeholder="O que voce comeu quando mediu?">
+        <input type="text" id="histC"  placeholder="O que você comeu quando mediu?">
 
         <div class="Deletar-Editar">
             <button id="deletar" onclick="deletar()">Deletar</button>
@@ -74,9 +72,9 @@
             <input type="text" id="inpurM2" placeholder="" readonly>
         </div>
 
-        <button  onclick="Comparar()">Comparar</button>
-        <p>Comparaçao</p>
-        <input type="text" id="Comparacao" placeholder="Comparaçao entre dias">
+        <button onclick="Comparar()">Comparar</button>
+        <p>Comparação</p>
+        <input type="text" id="Comparacao" placeholder="Comparação entre dias">
     </div>
 
     <div class="div"></div>
