@@ -156,7 +156,7 @@ body {
 
 /* media sreen do fundo animado */
 
-@media screen and (max-width:539px){
+@media screen and (max-width:538px){
     .fundo-animado button{
         margin-top: 50%;
     }
@@ -165,23 +165,39 @@ body {
     }
 }   
 
-@media screen and (min-width:540px) and (max-width:911px){
+
+@media screen and (max-width:540px) and (min-width:539px){
     .fundo-animado button{
-        margin-top: 27%;
+        margin-top: 30%;
     }
     .imagem-do-fundo{
         display: none;
+    }
+}   
+
+
+
+
+@media screen and (min-width:541px) and (max-width:911px){
+    .fundo-animado button{
+        margin-top: 30%;
+    }
+    .imagem-do-fundo{
+        display: none;
+    }
+    .fundo-animado{
+        height: 80vh;
     }
 }
 @media screen and (min-width:912px) and (max-width:999px){
     .fundo-animado{
-        height: 80vh;
+        height: 70vh;
     }
     .imagem-do-fundo{
         display: none;
     }
     .fundo-animado button{
-        margin-top: 20%;
+        margin-top: 30%;
     }
 }
 @media screen and (max-width:1299px) and (min-width:1000px){
@@ -661,6 +677,18 @@ body {
     margin-right: auto;
 }
 
+.pg3 video{
+    width: 700px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: -60px;
+    border: 2px solid rgba(165, 162, 162, 0.459);
+    padding: 10px;
+    background-color: #97B9FA;
+}
 /* media screen pg2  pg3 */
 
 @media screen and (max-width:600px){
@@ -832,7 +860,7 @@ body {
 }
 @media screen and (max-width:549px){
     .H1-dois{
-        margin-top: -70%;
+        margin-top: -62%;
     }
     .cards{
         display: flex;
@@ -870,13 +898,13 @@ body {
 
 @media screen and (min-width:1100px) and (max-width:1779px){
     .H1-dois{
-        margin-top: -10%;
+        margin-top: -1%;
     }
 }
 
 @media screen and (min-width:550px) and (max-width:1000px){
     .H1-dois{
-        margin-top: -20%;
+        margin-top: -50%;
     }
     .cards{
         display: flex;
