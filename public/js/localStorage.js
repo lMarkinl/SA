@@ -3,6 +3,7 @@ let userLogado = []
 var excluirUsers = 0
 var EditUser = 0
 let UserId = 0
+let userEdit = 0
 let usuario_cadastro = document.getElementById('usuario')
 let email_cadastro = document.getElementById('email')
 let senha_cadastro = document.getElementById('senha')
@@ -22,7 +23,9 @@ let userNome = document.getElementById('Usuario_nome')
 let userEmail = document.getElementById('Usuario_email')
 let userSenha = document.getElementById('Usuario_senha')
 
+let btnc = document.getElementsByClassName('btnC')
 let pgH = document.getElementsByClassName('pgH')
+let pgH2 = document.getElementsByClassName('pgH2')
 let pgCad = document.getElementsByClassName('pgCad')
 let pgLog = document.getElementsByClassName('pgLog')
 let pgHist = document.getElementsByClassName('pgHist')
@@ -34,6 +37,7 @@ let pgUser2 = document.getElementsByClassName('pgUser2')
 
 
 //Cadastrar
+
 
 const add = function () {
 
@@ -72,7 +76,7 @@ const add = function () {
                             } else {
                                 UserId = cadastro.length + 1
                             }
-                            alert(UserId)
+                            
 
                             cadastro.push({
                                 Id: UserId,
@@ -156,14 +160,19 @@ function getCookie(cname) {
 }
 
 function conectado() {
-
+ cadastro = JSON.parse(localStorage.getItem('cadastro'))
     let logado = getCookie("logado")
     if (logado == "sim") {
 
-
+      
 
         for (let i = 0; i < pgH.length; i++) {
             pgH[i].style.display = "block"
+
+        }
+
+        for (let i = 0; i < pgH2.length; i++) {
+            pgH2[i].style.display = "block"
 
         }
 
@@ -177,6 +186,10 @@ function conectado() {
         }
         for (let i = 0; i < pgHist.length; i++) {
             pgHist[i].style.display = "inline"
+           
+        }
+        for (let i = 0; i < btnc.length; i++) {
+            btnc[i].style.display = "none"
            
         }
         for (let i = 0; i < pgUser.length; i++) {
@@ -212,9 +225,18 @@ const entrar = function () {
     if (usuario_login.value != "" && senha_login.value != "") {
         let users = []
           
-       
-         
-         if (localStorage.getItem('cadastro') != null)
+        if(usuario_login.value == "admin" && senha_login.value == "admin"){
+
+
+            Swal.fire("adm logado")
+            setTimeout(function () {
+                window.location.href = "admin.html"
+            }, 1500)
+           
+
+        }else{
+ 
+            if (localStorage.getItem('cadastro') != null)
             users = JSON.parse(localStorage.getItem('cadastro'))
         if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
 
@@ -223,7 +245,7 @@ const entrar = function () {
             document.cookie = "id=" + JSON.stringify(id.Id)
             document.cookie = "User= " + JSON.stringify(users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value))
             document.cookie = "logado = sim"
-
+            
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -245,6 +267,9 @@ const entrar = function () {
 }
 
 
+
+        }
+        
 
 // Area de Admin
 
@@ -290,86 +315,16 @@ function delhist() {
 
 }
 
-//editar
-function UpDados() {
-
+function EditarAdm() {
+    
     cadastro = JSON.parse(localStorage.getItem('cadastro'))
 
-    if (dadosNome.value != "" && dadosEmail.value != "" && dadosSenha.value != "") {
+   
+    cadastro [ EditUser ] . usuario  =  dadosNome . valor
+    cadastro [ EditUser ] . email  =  dadosEmail . valor
+    cadastro [ EditUser ] . senha = dadosSenha  . valor 
 
-        if (dadosEmail.value.includes('@', 2) && dadosEmail.value.length > 2) {
-
-            if (dadosEmail.value.indexOf('.') > dadosEmail.value.indexOf('@') + 1) {
-
-
-
-                let auxEmail = cadastro.filter(cad => cad.email == dadosEmail.value)
-
-              if (auxEmail.length > 0) {
-
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Email ja existe',
-                    })
-                }
-                else {
-                    if (dadosNome.value.length >= 4) {
-
-                        if (dadosSenha.value.length >= 6) {
-
-
-                            cadastro[EditUser].usuario = dadosNome.value
-                            cadastro[EditUser].email = dadosEmail.value
-                            cadastro[EditUser].senha = dadosSenha.value
-
-                            Swal.fire('dados atualizados')
-
-                            localStorage.setItem('cadastro', JSON.stringify(cadastro))
-
-                        } else {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Oops...',
-                                text: 'Senha com no minimo 6 caracteris',
-                            })
-                        }
-
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Usuario precisa de no minimo 3 caracteris',
-                        })
-                    }
-                }
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Coloque um Email valido',
-                    footer: 'exemplo@gmail.com'
-                })
-            }
-
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Coloque o @ no seu email',
-            })
-        }
-
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Preencha todos os campos',
-        })
-    }
-
-
-
+    Swal.fire( 'dados atualizados' )
 
 }
 

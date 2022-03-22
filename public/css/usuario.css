@@ -9,7 +9,7 @@ body{
     animation: colors 10s ease infinite;
     font-family: Raleway;
 }
-/* @keyframes colors {
+@keyframes colors {
     0% {
         background-position: 0% 50%
     }
@@ -19,7 +19,7 @@ body{
     100% {
         background-position: 0% 50%
     }
-} */
+}
 
 @font-face {
     font-family: 'Raleway';
@@ -30,7 +30,7 @@ body{
 
 .PgUsuario{
     width: 900px;
-    height: 1000px;
+    height: 940px;
     border-radius: 50px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.63);
@@ -82,15 +82,25 @@ a:hover{
     text-align: center;
     margin-top: px;
 }
-
-.PgUsuario input[type="file"]{
-    margin-left: 250px;
-    outline: none;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    cursor: pointer;
-    width: 360px;
+#inputN{
+   margin-right: -10px;
 }
+#inpurN2{
+    width: 20%!important;
+    text-align: center;
+}
+
+#inputM{
+    display: flex;
+    margin-right: -12px;
+}
+
+ #inpurM2{
+    bottom: 3px;
+    width: 20%!important;
+    text-align: center;
+}
+
 
 #imgUsuario{
     border-radius: 50%;
@@ -119,9 +129,9 @@ a:hover{
     margin-right: auto;
     margin-top: -30px;
     text-align: center;
-
-
 }
+
+
 #histData{
     width: 90%;
     margin-left: auto;
@@ -160,11 +170,9 @@ a{
 }
 
 .PgUsuario button{
+    margin-left: 16%;
+    margin-top: 7%;
     width: 25%;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     height: 50px;
     border: none;
     outline: none;
@@ -198,7 +206,7 @@ a{
     .PgUsuario{
     transform: translate(-50%, 5%);
     width: 500px;
-    height: 1000px;
+    height: 940px;
     }
     .PgUsuario input[type="file"]{
         display: block;
@@ -217,7 +225,7 @@ a{
 /* PG USUARIO 2 */
 .PgUsuario-dois{
     width: 900px;
-    height: 470px;
+    height: 580px;
     border-radius: 50px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.63);
@@ -253,7 +261,7 @@ a{
     font-size: 20px;
 }
 
-.PgUsuario-dois button{
+.PgUsuario-dois #pesquisar-lado{
     margin-left: 88%;
     margin-top: -50px;
     display: block;
@@ -268,6 +276,20 @@ a{
     background: #4676d6;
     transition: 1s;
 }
+
+
+.Deletar-Editar button{
+    margin-left: 16%;
+    margin-top: 7%;
+    width: 25%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 20px;
+}
+
 #input{
     width: 90%;
     margin-left: auto;
@@ -284,7 +306,7 @@ a{
 @media screen and (max-width:700px){
     .PgUsuario-dois{
         width: 320px;
-        height: 660px;
+        height: 700px;
     }
     .escolha{
         width: 80%;
@@ -299,19 +321,34 @@ a{
         margin-left: auto;
         margin-right: auto;
     }
-    .PgUsuario-dois button{
-       margin-top: 20px;
+    .PgUsuario-dois #pesquisar-lado{
+       margin-top: 40px;
        display: block;
        margin-left: auto;
        margin-right: auto;
 
     }
+    #PesquisarHistorico{
+        margin-top: 20px;
+        width: 90%;
+        text-align: center;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Deletar-Editar button{
+        margin-left: 13%;
+        width: 30%;
+    }
+    
+    
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
     .PgUsuario-dois{
         width: 500px;
-        height: 550px;
+        height: 680px;
     }
     .escolha{
         width: 80%;
@@ -326,10 +363,21 @@ a{
         width: 65%;
         margin: 20px;
     }
-    .PgUsuario-dois button{
-        margin-left: 350px;
-        margin-top: -68px;
+    .PgUsuario-dois #pesquisar-lado{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
+    #PesquisarHistorico{
+        margin-top: 20px;
+        width: 90%;
+        text-align: center;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 
@@ -337,7 +385,7 @@ a{
 
 .PgUsuario-tres{
     width: 900px;
-    height: 200px;
+    height: 280px;
     border-radius: 50px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.63);
@@ -348,22 +396,36 @@ a{
     padding: 68px 28px;
     margin-top: 30px;
 }
+.PgUsuario-tres-um{
+    display: flex;
+}
+.PgUsuario-tres-dois{
+    display: flex;
+}
+#inpurN2{
+    width: 18%;
+    margin-top: -44px;
+    margin-left: 20px;
+}
+#inpurM2{
+    width: 18%;
+    margin-top: 8px;
+    margin-left: 20px;
+}
 .PgUsuario-tres #inputN{
     margin-top: -52px;
-    width: 30%;
+    width: 50%;
     display: flex;
     height: 50px;
     font-size: 20px;
     text-align: center;
 }
 .PgUsuario-tres #inputM{
-    margin-top: -53px;
-    width: 30%;
+    width: 50%;
     display: flex;
     height: 50px;
     font-size: 20px;
     text-align: center;
-    margin-left: 300px;
 }
 .PgUsuario-tres button{
     margin-left: 75%;
@@ -421,6 +483,11 @@ a{
         margin-right: auto;
         display: block;
     }
+    #inpurM2{
+        width: 18%;
+        margin-top: 28px;
+        margin-left: 20px;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:1024px) {
@@ -429,16 +496,14 @@ a{
         height: 400px;
     }
     .PgUsuario-tres #inputN{
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 70%;
+        justify-content: left;
         display: flex;
     }
     .PgUsuario-tres #inputM{
-        width: 90%;
+        width: 70%;
         margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: -00px;
         display: flex;
     }
     .PgUsuario-tres button{
@@ -447,11 +512,10 @@ a{
         margin-right: auto;
         display: block;
     }
-    .PgUsuario-tres #input2{
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
+    #inpurM2{
+        width: 18%;
+        margin-top: 28px;
+        margin-left: 20px;
     }
 }
 

@@ -7,7 +7,7 @@
     <title>Health History</title>
     <link rel="stylesheet" href="./css/usuario.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="shortcut icon" href="./img/icone.png" type="image/.png">
+    <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body onload="conectado()">
@@ -20,55 +20,70 @@
                
 
                 <p>Usuario:</p>
-                <input type="text" id="Usuario_nome" readonly placeholder="Nome de Usuario">
+                <input type="text" id="Usuario_nome" readonly  placeholder="Nome de Usuario">
             
                 <p>Email:</p>
-                <input type="email" id="Usuario_email" readonly placeholder="Email do Usuario">
+                <input type="email" id="Usuario_email"  placeholder="Email do Usuario">
          
                 <p>Senha:</p>
-                <input type="text" id="Usuario_senha" readonly placeholder="Senha do Usuario">
+                <input type="text" id="Usuario_senha" placeholder="Senha do Usuario">
 
                
             </form>
              <button onclick="LogOut()">Log Out</button>
+             <button onclick="EditUsuario()">Editar</button>
             
     </div>
 
     <div class="PgUsuario-dois">
         <select  class="escolha">
-            <option value="glico1">Diabetis Tipo 1</option>
-            <option value="glico2">Diabetis Tipo 1</option>
-            <option value="glico3">Diabetis gestacional</option>
+            <option value="glico1">Diabetes Tipo 1</option>
+            <option value="glico2">Diabetes Tipo 2</option>
+            <option value="glico3">Diabetes gestacional</option>
         </select>
         <input id="PesquisarHistorico" type="date" placeholder="Pesquisar seu Histórico">
         <button id="pesquisar-lado" onclick="PesqHist()">Pesquisar</button>
         
         
         <p>Mediçao:</p>
-        <input type="text" id="histMed" readonly placeholder="Digite a mediçao">
+        <input type="text" id="histMed"  placeholder="Digite a mediçao">
         <p>Data da Mediçao</p>
-        <input type="date" id="histData" readonly placeholder="Data da mediçao">
+        <input type="date" id="histData"  placeholder="Data da mediçao">
         <p>O que voce comeu quando mediu?</p>
-        <input type="text" id="histC"  readonly placeholder="O que voce comeu quando mediu?">
+        <input type="text" id="histC"  placeholder="O que voce comeu quando mediu?">
 
         <div class="Deletar-Editar">
-            <button id="deletar">Deletar</button>
-            <button id="editar">Editar</button>
+            <button id="deletar" onclick="deletar()">Deletar</button>
+            <button id="editar" onclick="editar()">Editar</button>
         </div>
 
     </div>
 
     <div class="PgUsuario-tres">
-        <input  id="inputN" onchange="buscardata1()" type="date">
-        <input id="inputM" onchange="buscardata1()"  type="date">
+
+        <div class="PgUsuario-tres-um">
+
+            <input  id="inputN" onchange="buscardata1()" type="date"> 
+            <input type="text" id="inpurN2" placeholder="" readonly>
+
+        </div>
+
+        <div class="PgUsuario-tres-dois">
+
+            <input id="inputM" onchange="buscardata1()"  type="date">
+            <input type="text" id="inpurM2" placeholder="" readonly>
+        </div>
+
         <button  onclick="Comparar()">Comparar</button>
         <p>Comparaçao</p>
         <input type="text" id="Comparacao" placeholder="Comparaçao entre dias">
     </div>
+
     <div class="div"></div>
 
 <script src="js/historico.js"></script>
 <script src="js/localStorage.js"></script>
 <script src="js/usuario.js"></script>
+<script src="js/sweetalert2.11.js"></script>
 </body>
 </html>

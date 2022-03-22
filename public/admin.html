@@ -7,8 +7,9 @@
     <title>Health History</title>
     <script src="js/sweetalert2.11.js"></script>
     <link rel="stylesheet" href="./css/admin.css">
-    <link rel="shortcut icon" href="./img/icone.png" type="image/.png">
+    <link rel="shortcut icon" href="./img/saude.png" type="image/.png">
     <link rel="stylesheet" href="./css/global.css">
+    <script src="js/sweetalert2.11.js"></script>
 </head>
 <body  onload="conectado()">
     <a href="./index.html">Health History</a>
@@ -20,7 +21,7 @@
                 <button type="button" onclick="pesquisar()">Pesquisar</button>
                 <p>Dados do usuário</p>
                 <p>Usuario:</p>
-                <input type="text" id="dados_nome" readonly placeholder="Nome de Usuario">
+                <input type="text" id="dados_nome"  placeholder="Nome de Usuario">
             
                 <p>Email:</p>
                 <input type="email" id="dados_email"  placeholder="Email do Usuario">
@@ -29,13 +30,14 @@
                 <input type="text" id="dados_senha"  placeholder="Senha do Usuario">
 
 
-                <button onclick="delhist()">Deletar Histórico</button>
-                <button onclick="UpDados()">Editar Histórico</button>
+                
             </form>
+
+            <button onclick="delhist()">Deletar Usuario</button>
+            <button onclick="EditarAdm()">editar usuario</button>
+            
     </div>
-
-    <div class="divisao"></div>
-
-  <script src="./js/localStorage.js"></script>
+    
+    <script src="./js/localStorage.js"></script>
 </body>
 </html>
