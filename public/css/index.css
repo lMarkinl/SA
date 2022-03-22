@@ -167,7 +167,7 @@ body {
 
 @media screen and (min-width:540px) and (max-width:911px){
     .fundo-animado button{
-        margin-top: 40%;
+        margin-top: 27%;
     }
     .imagem-do-fundo{
         display: none;
@@ -180,18 +180,31 @@ body {
     .imagem-do-fundo{
         display: none;
     }
-}
-@media screen and (max-width:1500px) and (min-width:1300px) {
     .fundo-animado button{
-        margin-top: 22%;
+        margin-top: 20%;
     }
-    
 }
 @media screen and (max-width:1299px) and (min-width:1000px){
     .imagem-do-fundo{
         display: none;
     }
+    .fundo-animado button{
+        margin-top: 20%;
+    }
 }
+@media screen and (max-width:2600px) and (min-width:1500px) {
+    .fundo-animado button{
+        margin-top: 30%;
+    }
+    
+}
+@media screen and (max-width:1400px) and (min-width:1300px) {
+    .fundo-animado button{
+        margin-top: 22%;
+    }
+    
+}
+
 
 /* Media screen NAV*/
 
@@ -525,7 +538,7 @@ body {
     }
   }
 
-@media screen and (min-width:710px) and (max-width:949px){
+@media screen and (min-width:701px) and (max-width:949px){
     .P {
       padding:2%;
     }
@@ -533,13 +546,13 @@ body {
         padding: 2%;
     }
     .H1{
-      font-size: 4rem;
+      font-size: 3rem;
       top: 20%;
       padding-left: 15%;
       padding-right: 20%;
     }
     .P2{
-      font-size: 2.5rem;
+      font-size: 2rem;
       top: 23%;
       padding-left: 15%;
       padding-right: 15%;
