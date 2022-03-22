@@ -30,7 +30,7 @@ body{
 
 .PgUsuario{
     width: 900px;
-    height: 940px;
+    height: 760px;
     border-radius: 50px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.63);
@@ -189,11 +189,12 @@ a{
     .PgUsuario{
      transform: translate(-50%, 5%);
      width: 320px;
-     height: 1000px;
+     height: 740px;
     } 
     .PgUsuario button{
         width: 40%;
-
+        margin-left: 15px;
+        
     }
     .PgUsuario input[type="file"]{
        display: block;
@@ -206,7 +207,7 @@ a{
     .PgUsuario{
     transform: translate(-50%, 5%);
     width: 500px;
-    height: 940px;
+    height: 740px;
     }
     .PgUsuario input[type="file"]{
         display: block;
