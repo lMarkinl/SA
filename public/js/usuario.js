@@ -10,6 +10,8 @@ if (logado == "sim") {
   userSenha.value = log.senha
 }
 
+
+
 function LogOut() {
 
   let cookies = document.cookie.split(";");
@@ -23,6 +25,7 @@ function LogOut() {
   window.location = "index.html"
 }
 
+//editar usuario
 
 function EditUsuario() {
 
@@ -134,8 +137,4 @@ function EditUsuario() {
       text: 'Preencha todos os campos',
     })
   }
-
-
-
-
 }

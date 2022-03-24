@@ -23,7 +23,7 @@ let data2
 var med1
 var med2
 
-
+//pegar cookies
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -40,6 +40,8 @@ function getCookie(cname) {
     }
     return "";
 }
+
+//salva historico
 
 function mandar() {
 
@@ -60,49 +62,59 @@ function mandar() {
     medicao.value = ""
     dataMed.value = ""
     eat.value = ""
+    setTimeout(function () {
+      window.location.href = "usuario.html"
+    }, 1000)
 
 }
 
+//pesquisar historico
 
 function PesqHist() {
 
     historico = JSON.parse(localStorage.getItem('historico'))
 
+    let hist_Id = historico.filter(hist_Id => hist_Id.Id == getCookie("id"))
+    if (hist_Id.length > 0) {
 
 
-    for (let i = 0; i < historico.length; i++) {
+        if (hist_Id.find(hist_Id => hist_Id.data === PesquisarHistorico.value)) {
+            let historicoSalvo = hist_Id.find(histUsuario => histUsuario.data === PesquisarHistorico.value)
 
-        if (historico[i].Id == getCookie("id")) {
+            histMed.value = historicoSalvo.medicao
+            histData.value = historicoSalvo.data
+            histC.value = historicoSalvo.eat
 
-            if (PesquisarHistorico.value == historico[i].data) {
+            for (let i = 0; i < historico.length; i++) {
 
-                EditHIst = i
-                histMed.value = historico[i].medicao
-                histData.value = historico[i].data
-                histC.value = historico[i].eat
-                break
-            }else{
-                Swal.fire('data não encontrada')
-                PesquisarHistorico.value = ""
-                histMed.value = ""
-                histData.value = ""
-                histC.value = ""
+                if (PesquisarHistorico.value === historico[i].data) {
+
+                    if (historico[i].Id == getCookie("id")) {
+
+                        EditHIst = i
+
+                        histMed.value = historico[i].medicao
+                        histData.value = historico[i].data
+                        histC.value = historico[i].eat
+                    }
+                }
             }
-    
+        } else {
+            Swal.fire('data nao encontrada')
+            histMed.value = ""
+            histData.value= ""
+            histC.value = ""
         }
+    }else {
+        Swal.fire('data nao encontrada')
+        histMed.value = ""
+        histData.value= ""
+        histC.value = ""
     }
 
 }
 
-function pegardata(data) {
-
-
-    return historico.filter(date => {
-
-        return date.data === data
-
-    })
-}
+// buscar valores da data
 
 function buscardata1() {
 
@@ -113,6 +125,7 @@ function buscardata1() {
             if (inputN.value === historico[i].data) {
                 med1 = historico[i].medicao
                 inputN2.value = med1 + "mg/dl"
+
             }
         }
     }
@@ -129,6 +142,7 @@ function buscardata1() {
     }
 }
 
+//compação das medições
 
 function Comparar() {
     historico = JSON.parse(localStorage.getItem('historico'))
@@ -142,19 +156,26 @@ function Comparar() {
 
         comparacao.value = `sua glicose aumento em ${Math.abs(resultado.toFixed(2))}%`
 
+    } else if(med1 = med2){
+        comparacao.value = `sua glicose nao teve nenhuma alterção ` 
     }
-    else {
-        Swal.fire('uma das datas nao foi encontrada')
-    }
+     if (med1 == null  || med2 == null) {
 
+        Swal.fire('data não encontrada')
+    }
     inputN.value = ""
     inputM.value = ""
     inputN2.value = ""
     inputM2.value = ""
+   
     setTimeout(function () {
         comparacao.value = ""
+        med1 = null
+        med2 = null
     }, 5000)
 }
+
+// deletar historico
 
 function deletar() {
 
@@ -183,15 +204,17 @@ function deletar() {
 
 }
 
+// editar historico
+
 function editar() {
 
     historico = JSON.parse(localStorage.getItem('historico'))
-   
 
-        historico[EditHIst].medicao = histMed.value
-        historico[EditHIst].data = histData.value
-        historico[EditHIst].eat = histC.value
-    
+
+    historico[EditHIst].medicao = histMed.value
+    historico[EditHIst].data = histData.value
+    historico[EditHIst].eat = histC.value
+
 
 
     Swal.fire('historico atualizados')
@@ -199,9 +222,6 @@ function editar() {
     localStorage.setItem('historico', JSON.stringify(historico))
 
 
-    
-    histMed.value = ""
-    histData.value = ""
-    histC.value = ""
-    PesquisarHistorico.value = ""
+
+  
 }

@@ -188,15 +188,10 @@ function conectado() {
             pgHist[i].style.display = "inline"
            
         }
-        for (let i = 0; i < btnc.length; i++) {
-            btnc[i].style.display = "none"
-           
-        }
         for (let i = 0; i < pgUser.length; i++) {
             pgUser[i].style.display = "inline"
 
         }
-        
         for (let i = 0; i < pgCad2.length; i++) {
             pgCad2[i].style.display = "none"
 
@@ -219,9 +214,6 @@ function conectado() {
 //Logar
 const entrar = function () {
 
-
-
-
     if (usuario_login.value != "" && senha_login.value != "") {
         let users = []
           
@@ -232,12 +224,13 @@ const entrar = function () {
             setTimeout(function () {
                 window.location.href = "admin.html"
             }, 1500)
-           
-
+        
         }else{
  
             if (localStorage.getItem('cadastro') != null)
+            
             users = JSON.parse(localStorage.getItem('cadastro'))
+
         if (users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)) {
 
             id = users.find(users => users.usuario == usuario_login.value && users.senha == senha_login.value)
@@ -288,9 +281,7 @@ function pesquisar() {
             dadosNome.value = cadastro[i].usuario
             dadosEmail.value = cadastro[i].email
             dadosSenha.value = cadastro[i].senha
-
         }
-
     }
 }
 
@@ -314,17 +305,3 @@ function delhist() {
     }
 
 }
-
-function EditarAdm() {
-    
-    cadastro = JSON.parse(localStorage.getItem('cadastro'))
-
-   
-    cadastro [ EditUser ] . usuario  =  dadosNome . valor
-    cadastro [ EditUser ] . email  =  dadosEmail . valor
-    cadastro [ EditUser ] . senha = dadosSenha  . valor 
-
-    Swal.fire( 'dados atualizados' )
-
-}
-

@@ -81,7 +81,7 @@ a:hover{
     text-align: center;
 }
     
-.admin input[type ="email"], input[type="number"], input[type="text"]{
+.admin input[type ="email"], input[type="number"],input[type="password"], input[type="text"]{
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: transparent;
