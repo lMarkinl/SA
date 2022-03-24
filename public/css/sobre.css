@@ -486,7 +486,7 @@ body {
 }
   
 
-@media screen and (min-width: 1360px) and (max-width:1500px){
+@media screen and (min-width: 1301px) and (max-width:1500px){
     .fundo-animado h1{
         font-size: 4rem;
         top: 20%;
